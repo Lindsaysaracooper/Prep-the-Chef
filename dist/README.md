@@ -41,4 +41,13 @@
         ```
   - Components: Login/Signup, Landing Page, Search Page, Results Page, Personal dashboard, Message Modal
 
-  - Routes: | Landing -> Login | Landing -> SearchPage | SearchPage-> SearchResults | Login/Signup->PersonalDashBoard | ResultsPage->eachRestaurant | eachRestaurant-> Message Modal | Message Modal -> eachRestaurant | eachRestaurant-> SearchResults |
+  - Routes: | Landing -> Login | Landing -> SearchPage | SearchPage-> SearchResults | Login/Signup->PersonalDashBoard | ResultsPage->eachRestaurant | eachRestaurant-> Message Modal | Message Modal -> eachRestaurant | eachRestaurant-> SearchResults
+
+
+### MVP
+  - A main page for a user to see participating restaurants
+  - A way to message the business and have the message get stored in a dashboard
+  - A dashboard with the user, including the messages they have sent with the ability to delete them.
+
+### Icebox
+  - Adding a search and search result page

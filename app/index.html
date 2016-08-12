@@ -6,7 +6,184 @@
 		<link media="screen" href="main.css" rel="stylesheet"/>
 	</head>
 	<body>
+		<nav>
+			<img src="http://wisushi.com/img/chef-icon-bottom-menu.png" alt="Chef Logo" />
+			<input id="aboutButton" type="button" name="about" value="ABOUT">
+			<input id="searchButton" type="button" name="search" value="SEARCH">
+			<input id="dashboardButton"type="button" name="button" value="DASHBOARD">
+			<input id="loginButton"type="button" name="login" value="LOGIN">
+			<input id="logoutButton"type="button" name="logout" value="LOGOUT">
+		</nav>
 
+		<header>
+			<h1>Prep the Chef</h1>
+			<h2>Chat with the chef to prepare meals designed with you in mind.</h2>
+			<h3>Located in Austin Only</h3>
+			<input id="restaurantSearchArea" type="text" name="search" placeholder="Search cuisine type">
+			<input id ="findButton" type="button" name="searchbutton" value="FIND">
+		</header>
+
+<article class="howItWorks">
+	<h1>How It Works</h1>
+	<div class="howBox">
+		<i class="fa fa-search" aria-hidden="true"></i>
+		<p>
+			Search and select participating restaurants.
+		</p>
+	</div>
+		<i class="fa fa-arrow-right" aria-hidden="true"></i>
+	<div class="howBox">
+		<i class="fa fa-comment-o" aria-hidden="true"></i>
+		<p>
+			Message the chef directly with your dietary restrictions, date and time of arrival.
+		</p>
+	</div>
+		<i class="fa fa-arrow-right" aria-hidden="true"></i>
+	<div class="howBox">
+		<i class="fa fa-cutlery" aria-hidden="true"></i>
+		<p>
+			Show up and enjoy a meal made for you.
+		</p>
+	</div>
+</article>
+<section class= 'examples'>
+	<div class="exampleRestaurant">
+		<span class="restaurantNameExample"></span>
+		<span class="cuisineTypeExample"></span>
+		<span class="ratingExample"></span>
+	</div>
+	<div class="exampleRestaurant">
+		<img src="#" alt="photo of restaurant" />
+		<span class="restaurantNameExample"></span>
+		<span class="cuisineTypeExample"></span>
+		<span class="ratingExample"></span>
+	</div>
+	<div class="exampleRestaurant">
+		<img src="#" alt="photo of restaurant" />
+		<span class="restaurantNameExample"></span>
+		<span class="cuisineTypeExample"></span>
+		<span class="ratingExample"></span>
+	</div>
+	<div class="exampleRestaurant">
+		<img src="#" alt="photo of restaurant" />
+		<span class="restaurantNameExample"></span>
+		<span class="cuisineTypeExample"></span>
+		<span class="ratingExample"></span>
+	</div>
+
+</section>
+
+<div class="searchResultsPage">
+	<h1>Restaurants that fit your description</h1>
+	<!-- mulitples of these -->
+<div class="restaurantInSearch">
+		<img src="#" alt="restaurant image" />
+		<div class="restaurantInfoInSearch">
+			<p class="name"></p>
+				<p class="cuisine"></p>
+					<p class="rating"></p>
+					<input type="button" name="message" value="MESSAGE THE CHEF">
+		</div>
+</div>
+
+</div>
+<div class="messageModal">
+	<h1>To </h1>
+	<p>
+		Please rememeber to include specific allergies, date and time of arrival. Messages sent the day of the reservation have a low chance of response.
+	</p>
+	<p id ="messageContentSpace">	</p>
+		<input class ="sendButton" type="button" name="send" value="SEND TO CHEF">
+		<input class ="backButton" type="button" name="back" value="BACK">
+</div>
+<div class="loginModal">
+	<p>
+		Oops! Looks like you need to login to do this. Please login or signup here.
+		<!-- have 'here' link to loginpage -->
+	</p>
+		<input class ="backButton" type="button" name="back" value="BACK">
+</div>
+<div class="loginModal">
+	<div class="login">
+		<h1>LOG IN</h1>
+		<span class="loginWords">USERNAME</span>
+		<input class="inputField" type="text" placeholder="type here">
+			<span class="loginWords">PASSWORD</span>
+		<input class="inputField" type="text" placeholder="type here">
+		<input class="inputField" type="button" name="send" value="SEND">
+	</div>
+	<p>
+		Haven't signed up yet? Fill out below:
+	</p>
+	<div class="signup">
+		<h1>SIGN UP</h1>
+		<span class="loginWords">USERNAME</span>
+		<input class="loginSend" type="text" placeholder="type here">
+			<span class="loginWords">PASSWORD</span>
+		<input class="inputField" type="text" placeholder="type here">
+		<input class="signupSend" type="button" name="send" value="SEND">
+		<input id ="loginBack" type="button" name="back" value="BACK">
+	</div>
+	<aside class="about">
+		<h1>ABOUT</h1>
+		<p>
+			Enter some copy about the concept behind the restaurant.
+		</p>
+		<div class="testimonial1">
+			<img id="chefPhoto" src="http://www.jazzmenrice.com/chefs/5/main-photo/Chef%20Mark%201%20FINAL.jpg" alt="Chef Photo" />
+			<p>
+				"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+			</p>
+		</div>
+		<div class="testimonial2">
+			<p>
+				"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibus."
+			</p>
+			<img id = "customerPhoto" src="https://c1.staticflickr.com/5/4074/4894709118_d04583a76a_b.jpg" alt="Woman Eating" />
+		</div>
+
+	</aside>
+
+		<div class="messageSentModal">
+			<p>
+				Thank you for the message. You will hear back from the chef within the next 24 hours.
+			</p>
+			<div class="deleteModal">
+				<p>
+				Your message has been deleted. If you would like to cancel the reservation, please contact the restaurant directly.
+				</p>
+		</div>
+</div>
+<div class="dashboard">
+	<div class="userDashboard">
+		<h2>Your Account</h2>
+		<img src="x" alt="Your photo" />
+		<p>
+			<!-- the username -->
+		</p>
+	</div>
+	<div class="messageCenter">
+		<h1>MESSAGE CENTER</h1>
+		<!-- there will be a lot of these -->
+		<div class="eachMessage">
+			<img src="#" alt="restaurantImage" />
+			<p>
+				<!-- Restaurant name -->
+			</p>
+			<p>
+				<!-- Customer sent message -->
+			</p>
+			<input type="button" name="delete" value="DELETE">
+
+		</div>
+
+	</div>
+</div>
+<footer>
+<p>
+	Copyright &copy; 2016 Prep The Chef Inc. related marks are registered trademarks of Prep The Chef.
+</p>
+</footer>
 		<script src="main.js" charset="utf-8"></script>
 	</body>
 </html>
