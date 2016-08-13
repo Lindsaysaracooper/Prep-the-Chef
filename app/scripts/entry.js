@@ -14,10 +14,11 @@ const router = (
   <Route path="/" component ={App}>
   <IndexRedirect to= "/home"/>
   <Route path ="/home" component={Homepage}/>
-    <Route path="/login" component={Login}/>
-    <Route path="/about" component={About}/>
-    <Route path="/dashboard" component={Dashboard}/>
-  </Route>
+      <Route path="/login" component={Login}/>
+      <Route path="/about" component={About}/>
+      <Route path="/dashboard" component={Dashboard}/>
+      </Route>
+
 </Router>
   )
 ReactDOM.render(router,document.querySelector('.container'));

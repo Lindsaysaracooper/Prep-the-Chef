@@ -7,33 +7,33 @@ import { Link,} from 'react-router'
 
 // i want the login to show up when the login button is clicked, modal over the main page
 export default React.createClass({
-  getInitialState: function(){
-    return{};
-  },
-  updateState: function(){
-
-    this.setState(store.session.toJSON());
-  },
-  componentDidMount: function (){
-    store.session.on('change', this.updateState);
-
-  },
-  componentWillUnmount:function(){
-    store.session.off('change',this.updateState)
-  },
-
-
-
-  loginSubmitHandler: function (e){
-      e.preventDefault();
-      let username = this.refs.username.value;
-      let password = this.refs.password.value;
-      let data={
-        username:username,
-        password:password
-      };
-store.session.login(data);
-  },
+//   getInitialState: function(){
+//     return{};
+//   },
+//   updateState: function(){
+//
+//     this.setState(store.session.toJSON());
+//   },
+//   componentDidMount: function (){
+//     store.session.on('change', this.updateState);
+//
+//   },
+//   componentWillUnmount:function(){
+//     store.session.off('change',this.updateState)
+//   },
+//
+//
+//
+//   loginSubmitHandler: function (e){
+//       e.preventDefault();
+//       let username = this.refs.username.value;
+//       let password = this.refs.password.value;
+//       let data={
+//         username:username,
+//         password:password
+//       };
+// store.session.login(data);
+//   },
   render: function(){
 
     return(

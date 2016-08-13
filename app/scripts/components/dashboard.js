@@ -19,10 +19,9 @@ export default React.createClass({
         			<p>
         			</p>
         			<input type="button" name="delete" value="DELETE"/>
-
         		</div>
-
         	</div>
+          </div>
 
       )
   }

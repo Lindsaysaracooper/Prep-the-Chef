@@ -20,7 +20,7 @@ export default React.createClass({
     // push navigation to /login
   },
   goToHomeHandler: function (e){
-    hashHistory.push('/');
+    hashHistory.push('/home');
     // push navigation to /login
   },
   goToDashboardHandler: function (e){
@@ -40,7 +40,7 @@ render:function(){
         type="button"
         name="search"
         value="SEARCH"
-        onClick={this.gotoHomeHandler}/>
+        onClick={this.goToHomeHandler}/>
       <input id="dashboardButton"
         type="button"
         name="button"
@@ -52,7 +52,11 @@ render:function(){
         value="LOGIN"
         onClick={this.goToLoginHandler} />
 
-      <input id="logoutButton"type="button" name="logout" value="LOGOUT"/>
+      <input id="logoutButton"
+        type="button"
+        name="logout"
+        value="LOGOUT"
+        onClick={this.goToHomeHandler}/>
     </nav>
 
   )
