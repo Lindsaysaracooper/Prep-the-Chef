@@ -1,6 +1,7 @@
+import React from 'react';
 import Session from './models/session';
 
 
 export default{
-  session: newSession();
+  session: new Session()
 };
