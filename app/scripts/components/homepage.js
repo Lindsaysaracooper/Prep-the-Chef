@@ -5,11 +5,13 @@ import $ from 'jquery';
 
 
 export default React.createClass({
-
 render:function(){
   return(
     <main>
     <header>
+    <video id="video" loop muted autoPlay className="fullscreen-bg__video">
+     <source src="assets/videos/cooking.mp4" type="video/mp4"/>
+    </video>
 			<h1>Prep the Chef</h1>
 			<h2>Chat with the chef to prepare meals designed with you in mind.</h2>
 			<h3>Currently in Austin Only</h3>

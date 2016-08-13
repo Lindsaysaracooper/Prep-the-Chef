@@ -32,27 +32,32 @@ render:function(){
     <nav>
       <img src="http://wisushi.com/img/chef-icon-bottom-menu.png" alt="Chef Logo" />
       <input id="aboutButton"
+        class="navButton"
         type="button"
         name="about"
         value="ABOUT"
         onClick={this.goToAboutHandler}/>
       <input id="searchButton"
+        class="navButton"
         type="button"
         name="search"
         value="SEARCH"
         onClick={this.goToHomeHandler}/>
       <input id="dashboardButton"
+        class="navButton"
         type="button"
         name="button"
         value="DASHBOARD"
         onClick={this.goToDashboardHandler}/>
       <input id="loginButton"
+        class="navButton"
         type="button"
         name="login"
         value="LOGIN"
         onClick={this.goToLoginHandler} />
 
       <input id="logoutButton"
+        class="navButton"
         type="button"
         name="logout"
         value="LOGOUT"

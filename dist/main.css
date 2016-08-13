@@ -1,3 +1,46 @@
+@import "https://fonts.googleapis.com/css?family=Great+Vibes";
+@import "https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Great+Vibes";
+nav {
+  margin-top: -9px;
+  padding-top: 11px; }
+  nav img {
+    width: 4%; }
 
+#aboutButton, #searchButton, #dashboardButton, #loginButton, #logoutButton {
+  border: none;
+  opacity: .7;
+  font-size: 1.5rem;
+  background: #2E2C2A;
+  color: white;
+  float: right;
+  font-family: 'Alegreya Sans SC', sans-serif; }
+  #aboutButton:hover, #searchButton:hover, #dashboardButton:hover, #loginButton:hover, #logoutButton:hover {
+    color: #EC7244;
+    border: none;
+    transform: scale(1.1); }
+  #aboutButton:focus, #searchButton:focus, #dashboardButton:focus, #loginButton:focus, #logoutButton:focus {
+    outline: 0; }
+
+video {
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  top: -142px; }
+
+header h1 {
+  position: relative;
+  bottom: 120vh;
+  text-align: center;
+  font-size: 5.5rem;
+  color: white;
+  font-family: 'Great Vibes', cursive; }
+header h2 {
+  position: relative;
+  bottom: 128vh;
+  text-align: center;
+  color: white;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 2rem; }
 
 /*# sourceMappingURL=main.css.map */

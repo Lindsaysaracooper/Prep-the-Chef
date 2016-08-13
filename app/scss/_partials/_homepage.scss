@@ -1,0 +1,28 @@
+video{
+  width: 100%;
+overflow: hidden;
+z-index: -1;
+position: relative;
+top: -142px;
+}
+
+header {
+
+h1{
+position: relative;
+bottom: 120vh;
+text-align: center;
+font-size: 5.5rem;
+color: white;
+font-family: 'Great Vibes', cursive;
+
+  }
+h2{
+  position: relative;
+bottom: 128vh;
+text-align: center;
+color:white;
+font-family: 'Alegreya Sans SC', sans-serif;
+font-size: 2rem;
+  }
+}

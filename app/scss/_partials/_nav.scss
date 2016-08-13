@@ -1,0 +1,29 @@
+  // nav img{
+  //       width: 4%;
+  // }
+
+nav{
+  margin-top: -9px;
+  padding-top: 11px;
+
+  img{
+  width: 4%;
+  }
+}
+#aboutButton,  #searchButton, #dashboardButton, #loginButton, #logoutButton {
+  border: none;
+  opacity: .7;
+    font-size: 1.5rem;
+    background: #2E2C2A;
+    color: white;
+    float: right;
+    font-family: 'Alegreya Sans SC', sans-serif;
+&:hover{
+  color:#EC7244;
+  border:none;
+  transform: scale(1.1);
+  }
+&:focus {
+  outline:0;
+  }
+}
