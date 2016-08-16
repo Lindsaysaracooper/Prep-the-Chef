@@ -5,6 +5,9 @@
 nav{
   margin-top: -9px;
   padding-top: 11px;
+  background-color: #2E2C2A;
+  opacity: .5;
+  height: 8vh;
 
   img{
   width: 4%;
@@ -12,18 +15,33 @@ nav{
 }
 #aboutButton,  #searchButton, #dashboardButton, #loginButton, #logoutButton {
   border: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+    margin-left: 5%;
   opacity: .7;
-    font-size: 1.5rem;
     background: #2E2C2A;
     color: white;
     float: right;
     font-family: 'Alegreya Sans SC', sans-serif;
+    text-transform: uppercase;
 &:hover{
-  color:#EC7244;
+  color:$orange;
   border:none;
   transform: scale(1.1);
   }
 &:focus {
   outline:0;
   }
+}
+
+#logoutButton{
+  margin-right:5%;
+}
+
+header h3{
+  position: relative;
+margin-top: -116vh;
+text-align: center;
+color: white;
+font-size: 1.4rem;
 }

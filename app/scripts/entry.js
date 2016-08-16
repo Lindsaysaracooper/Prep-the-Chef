@@ -7,14 +7,28 @@ import Homepage from './components/homepage';
 import Login from "./components/login";
 import About from './components/about';
 import Dashboard from './components/dashboard';
+import store from './store';
+import settings from './settings';
 
+$(document).ajaxSend(function(evt,xhr,jquerysettings){
+  // console.log(document.location);
+  // xhr.setRequestHeader('Authorization', `Basic ${settings.basicAuth}`)
+
+if (store.session.get('authtoken')){
+  xhr.setRequestHeader('Authorization', `Kinvey ${store.session.get('authtoken')}`)
+
+} else {
+    xhr.setRequestHeader('Authorization', `Basic ${settings.basicAuth}`)
+}
+});
 
 const router = (
 <Router history = {hashHistory}>
   <Route path="/" component ={App}>
   <IndexRedirect to= "/home"/>
-  <Route path ="/home" component={Homepage}/>
-      <Route path="/login" component={Login}/>
+  <Route path ="/home" component={Homepage}>
+      <Route path="login" component={Login}/>
+  </Route>
       <Route path="/about" component={About}/>
       <Route path="/dashboard" component={Dashboard}/>
       </Route>

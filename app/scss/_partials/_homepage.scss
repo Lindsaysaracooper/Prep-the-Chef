@@ -9,20 +9,135 @@ top: -142px;
 header {
 
 h1{
-position: relative;
-bottom: 120vh;
-text-align: center;
-font-size: 5.5rem;
-color: white;
-font-family: 'Great Vibes', cursive;
+  position: absolute;
+  bottom: 53vh;
+  width: 100%;
+  text-align: center;
+  font-size: 5.5rem;
+  color: white;
+  font-family: $header-font;
 
   }
 h2{
-  position: relative;
-bottom: 128vh;
-text-align: center;
-color:white;
-font-family: 'Alegreya Sans SC', sans-serif;
-font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  bottom: 53vh;
+  width: 100%;
+  color:white;
+  font-family: $main-font;
+  text-transform: uppercase;
+  font-size: 1.7rem;
   }
+h3{
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+  width: 100%;
+  position: absolute;
+  bottom: 38vh;
+  font-family: $main-font;
+  text-transform: uppercase;
+}
+}
+
+#restaurantSearchArea{
+  position: absolute;
+    bottom: 50vh;
+    width: 35%;
+    color: white;
+    right: 35%;
+    height: 21px;
+    text-align: center;
+}
+
+#findButton{
+  position: absolute;
+  bottom: 50vh;
+  right: 30%;
+  font-size: 1rem;
+  border: none;
+  background: white;
+  padding: 4px 10px;
+  font-family: $main-font;
+}
+
+// how it works stylings
+
+.howItWorks{
+position: absolute;
+width: 100%;
+top: 98vh;
+color:$gray;
+
+}
+.howItWorks h1{
+color:$orange;
+font-size: 4rem;
+text-align: center;
+font-family: $header-font;
+border-top: 2px dotted $gray;
+padding-top: 5vh;
+
+}
+
+.howBox{
+display: inline-flex;
+width: 30%;
+height: 33vh;
+padding-bottom: 5vh;
+text-transform: uppercase;
+p{
+  position: absolute;
+  top: 53vh;
+  width: 24%;
+  margin-left: 5%;
+  display: inline;
+  font-family: $main-font;
+  margin-top: 30px;
+}
+}
+#icon{
+  font-size: 8rem;
+  height: 21vh;
+  margin-left: 35%;
+  color:$orange;
+
+}
+#right{
+  font-size: 2rem;
+}
+
+.examples{
+  margin-top: 46vh;
+
+h1{
+  color:$orange;
+  font-size: 4rem;
+  text-align: center;
+  font-family: $header-font;
+  border-top: 2px dotted $gray;
+  padding-top: 5vh;
+  }
+}
+.exampleRestaurant{
+  display: inline-block;
+  width: 25%;
+    font-family: $main-font;
+    color:$gray;
+    text-transform: uppercase;
+
+img{
+  width: 95%;
+  overflow: hidden;
+  height: 210px;
+}
+.restaurantNameExample{
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.cuisineTypeExample{
+  text-align: center;
+  margin-top: 0;
+}
 }

@@ -41,4 +41,5 @@ export default Backbone.Model.extend({
   })
 },
 
+// logout is a endpoint on kinvey
 });

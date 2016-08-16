@@ -1,14 +1,14 @@
-// All Partial Files
-@import 'nav';
-@import 'homepage';
 
-
-
-// Colors
-$primary-color: #EC7244;
 
 
 
 // Google Fonts
-@import 'https://fonts.googleapis.com/css?family=Great+Vibes';
-@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Great+Vibes';
+@import 'https://fonts.googleapis.com/css?family=Abel|Great+Vibes';
+
+// Colors
+$orange: #EC7244;
+$gray: #2E2C2A;
+
+// Fonts
+$header-font: 'Great Vibes', cursive;
+$main-font: 'Abel', sans-serif;

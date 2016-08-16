@@ -1,70 +1,67 @@
 import React from 'react';
-import {Router, Route, hashHistory} from 'react-router';
+import {Router, Link, Route, hashHistory} from 'react-router';
 import ReactDOM from 'react-dom';
 import Login from './login';
 import About from './about';
+import store from './../store';
 
 
-// add route navigation. when this is clicked go here
-// Add if statements for login and logout
 
 export default React.createClass({
+    getInitialState: function(){
+      return{};
+      console.log("get initial state", this.state.authtoken);
+    },
+    updateState: function(){
 
-  goToLoginHandler: function (e){
-    hashHistory.push('/login');
-    console.log("I have been clicked");
-    // push navigation to /login
-  },
-  goToAboutHandler: function (e){
-    hashHistory.push('/about');
-    // push navigation to /login
-  },
-  goToHomeHandler: function (e){
-    hashHistory.push('/home');
-    // push navigation to /login
-  },
-  goToDashboardHandler: function (e){
-    hashHistory.push('/dashboard');
-    // push navigation to /login
-  },
+      this.setState(store.session.toJSON());
+    },
+    componentDidMount: function (){
+      store.session.on('change', this.updateState);
+      console.log('component did mount', this.state.authtoken);
+    },
+    componentWillUnmount:function(){
+      store.session.off('change',this.updateState)
+    },
+
+
 render:function(){
+  console.log(this.props);
+  let styles={
+
+
+  };
+  // let loggedInNav;
+    console.log('render', this.state.authtoken);
+    if(this.state.authtoken){
+
+    // return(
+    //   loggedInNav=[
+    //     <Link className ="navButton" id ="logoutButton"to = "/home">Logout</Link>,
+    //     <Link className ="navButton" id ="dashboardButton" to = "/dashboard">Dashboard</Link>
+    //   ])
+    return (
+      <nav>
+        <img src="http://wisushi.com/img/chef-icon-bottom-menu.png" alt="Chef Logo" />
+        <Link className ="navButton" id ="logoutButton"to = "/home">Logout</Link>
+        <Link className ="navButton" id ="dashboardButton" to = "/dashboard">Dashboard</Link>
+        <Link className ="navButton" id ="searchButton"to = "/home">Search</Link>
+        <Link className ="navButton" id ="aboutButton" to = "/about">About</Link>
+      </nav>
+    )
+    }else{
+
   return(
     <nav>
       <img src="http://wisushi.com/img/chef-icon-bottom-menu.png" alt="Chef Logo" />
-      <input id="aboutButton"
-        class="navButton"
-        type="button"
-        name="about"
-        value="ABOUT"
-        onClick={this.goToAboutHandler}/>
-      <input id="searchButton"
-        class="navButton"
-        type="button"
-        name="search"
-        value="SEARCH"
-        onClick={this.goToHomeHandler}/>
-      <input id="dashboardButton"
-        class="navButton"
-        type="button"
-        name="button"
-        value="DASHBOARD"
-        onClick={this.goToDashboardHandler}/>
-      <input id="loginButton"
-        class="navButton"
-        type="button"
-        name="login"
-        value="LOGIN"
-        onClick={this.goToLoginHandler} />
+      <Link className ="navButton" id ="loginButton"to = "/home/login">Login</Link>
+      <Link className ="navButton" id ="searchButton"to = "/home">Search</Link>
+      <Link className ="navButton" id ="aboutButton" to = "/about">About</Link>
 
-      <input id="logoutButton"
-        class="navButton"
-        type="button"
-        name="logout"
-        value="LOGOUT"
-        onClick={this.goToHomeHandler}/>
     </nav>
 
   )
+}
 }
 
 });

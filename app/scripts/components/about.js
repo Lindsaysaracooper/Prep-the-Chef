@@ -4,23 +4,32 @@ import ReactDOM from 'react-dom';
 
 export default React.createClass({
   render: function(){
-  console.log("please show up");
     return(
 
       <div className="about">
-        <h1>ABOUT</h1>
-        <p>
-          Enter some copy about the concept behind the restaurant.
-        </p>
-        <div className="testimonial1">
+        <h1>About</h1>
+        <h2>
+          Do you have severe allergies? Vegan? Vegetarian?
+        </h2>
+        <h2>
+          Do you have a hard time finding something on the menu that you can eat?
+        </h2>
+        <h3> Introducting <span> Prep the Chef </span> </h3>
+        <p> Prep the Chef is the new ordering solution for those with severe allergies. We have partnered with local, high-end restuarants who would love to prepare food just for you. </p>
+        <p> In the past, guests with allergies have had a much more limited menu as Chefs' often only prepare the kitchen for the items featured on their traditional dishes. Now, kitchens have enough advanced notice to buy ingredients and prep recipes so talented chefs can prepare dishes fit for your dietary needs.  </p>
+
+        <div className="testimonial">
           <img id="chefPhoto" src="http://www.jazzmenrice.com/chefs/5/main-photo/Chef%20Mark%201%20FINAL.jpg" alt="Chef Photo" />
-          <p>
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+
+          <p className="quote1">
+
+            "One of the hardest things in running a kitchen is getting a curve ball in the middle of a dinner rush. While I don't mind having vegan guests, it does affect the flow of a kitchen who is used to preparing food in a certain way/time. With Prep the Chef, I have more time to buy the necessary ingredients without risk of wasting of both time and money."
+
           </p>
         </div>
-        <div className="testimonial2">
+        <div className="testimonial">
           <p>
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibus."
+            Before Prep the Chef, my severe shellfish allergy prevented me from joining my friends to many restuarants. I was sick of having to ask the kitchen to prepare me something special and I was often scared my allergy would get lost in translation from the server. Now, I use Prep the Chef to alert the chef ahead of time and my special order is already lined up. It has made going out to eat so much less stressful.
           </p>
           <img id = "customerPhoto" src="https://c1.staticflickr.com/5/4074/4894709118_d04583a76a_b.jpg" alt="Woman Eating" />
         </div>
