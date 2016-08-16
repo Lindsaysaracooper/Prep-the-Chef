@@ -7,32 +7,33 @@ import store from './../store';
 
 
 
+
 export default React.createClass({
     getInitialState: function(){
-      return{};
-      console.log("get initial state", this.state.authtoken);
+      return{authtoken: store.session.get('authtoken')}
     },
     updateState: function(){
 
-      this.setState(store.session.toJSON());
+      this.setState({authtoken: store.session.get('authtoken')});
     },
     componentDidMount: function (){
       store.session.on('change', this.updateState);
-      console.log('component did mount', this.state.authtoken);
     },
     componentWillUnmount:function(){
       store.session.off('change',this.updateState)
     },
 
+    logoutButton:function(){
+      store.session.logout();
+    },
+
 
 render:function(){
-  console.log(this.props);
   let styles={
 
 
   };
   // let loggedInNav;
-    console.log('render', this.state.authtoken);
     if(this.state.authtoken){
 
     // return(
@@ -43,7 +44,10 @@ render:function(){
     return (
       <nav>
         <img src="http://wisushi.com/img/chef-icon-bottom-menu.png" alt="Chef Logo" />
-        <Link className ="navButton" id ="logoutButton"to = "/home">Logout</Link>
+        <Link className ="navButton"
+        id ="logoutButton"
+        onClick ={this.logoutButton}
+        to = "/home">Logout</Link>
         <Link className ="navButton" id ="dashboardButton" to = "/dashboard">Dashboard</Link>
         <Link className ="navButton" id ="searchButton"to = "/home">Search</Link>
         <Link className ="navButton" id ="aboutButton" to = "/about">About</Link>

@@ -20,7 +20,13 @@ if (store.session.get('authtoken')){
 } else {
     xhr.setRequestHeader('Authorization', `Basic ${settings.basicAuth}`)
 }
+
+
 });
+if (localStorage.authtoken){
+  store.session.set('authtoken', localStorage.authtoken)
+  store.session.retrieve()
+}
 
 const router = (
 <Router history = {hashHistory}>

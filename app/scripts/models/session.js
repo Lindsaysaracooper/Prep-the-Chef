@@ -13,6 +13,7 @@ export default Backbone.Model.extend({
       data: JSON.stringify(data),
       contentType: 'application/json',
       success:(s) => {
+        localStorage.authtoken= s._kmd.authtoken;
         this.set({
           username: s.username,
           authtoken: s._kmd.authtoken,
@@ -31,15 +32,38 @@ export default Backbone.Model.extend({
       data: JSON.stringify({username:data.username, password: data.password}),
       contentType: 'application/json',
       success:(s) => {
+          localStorage.authtoken= s._kmd.authtoken;
         this.set({
           username: s.username,
           authtoken: s._kmd.authtoken,
           _id:s._id
+
         })
       },
         error:function(e){console.log(e);}
   })
 },
+
+logout:function(data){
+  // verify their passwords match
+  $.ajax({
+    type:'POST',
+    url: `https:/baas.kinvey.com/user/${settings.appId}/_logout`,
+    success:(s) => {
+      this.clear();
+      localStorage.removeItem('authtoken');
+
+    },
+      error:function(e){console.log(e);}
+})
+},
+
+retrieve:function(data){
+  this.fetch({
+      url: `https:/baas.kinvey.com/user/${settings.appId}/_me`,
+  })
+}
+
 
 // logout is a endpoint on kinvey
 });
