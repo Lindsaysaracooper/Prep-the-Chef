@@ -2,8 +2,16 @@ import React from 'react';
 import Select from 'react-select';
 
 
+export default React.createClass({
+  getInitialState: function() {
+    return {}
+  },
+  searchChange: function(val){
+    this.setState({selectedCuisine: val.value})
+    
+    // this.refs.searchBox.value = val.value
+    },
 
-export default React.createclass({
   render:function(){
     let cuisines =[
       {value: 'American', label: 'American'},
@@ -23,8 +31,19 @@ export default React.createclass({
       {value: 'Bars', label: 'Bar Food'},
       {value: 'Southern', label: 'Southern'},
       {value: 'Brazilian', label: 'Brazilian'},
-    ]
+    ];
 
+return(
+      <Select
+      name="form-field-name"
+      className="searchbox"
+      value={this.state.selectedCuisine}
+      placeholder='sometin cool'
+      options={cuisines}
+      onChange={this.searchChange}
+      ref="searchBox"
+      />
+    );
   }
 
 

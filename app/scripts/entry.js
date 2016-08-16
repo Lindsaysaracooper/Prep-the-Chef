@@ -9,6 +9,7 @@ import About from './components/about';
 import Dashboard from './components/dashboard';
 import store from './store';
 import settings from './settings';
+import Search from './components/search';
 
 $(document).ajaxSend(function(evt,xhr,jquerysettings){
   // console.log(document.location);
@@ -37,6 +38,8 @@ const router = (
   </Route>
       <Route path="/about" component={About}/>
       <Route path="/dashboard" component={Dashboard}/>
+      <Route path="/search" component={Search}/>
+
       </Route>
 
 </Router>

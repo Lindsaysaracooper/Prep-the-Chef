@@ -40,27 +40,13 @@ h3{
 }
 }
 
-#restaurantSearchArea{
+.searchbox {
   position: absolute;
-    bottom: 50vh;
-    width: 35%;
-    color: white;
-    right: 35%;
-    height: 21px;
-    text-align: center;
+    width: 58%;
+    bottom: 97vh;
+    margin-left: 21%;
+    font-family: $main-font;
 }
-
-#findButton{
-  position: absolute;
-  bottom: 50vh;
-  right: 30%;
-  font-size: 1rem;
-  border: none;
-  background: white;
-  padding: 4px 10px;
-  font-family: $main-font;
-}
-
 // how it works stylings
 
 .howItWorks{

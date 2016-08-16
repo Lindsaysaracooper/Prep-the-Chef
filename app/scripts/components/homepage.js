@@ -16,8 +16,6 @@ render:function(){
 			<h1>Prep the Chef</h1>
 			<h2>chat with the chef to prepare meals designed with you in mind.</h2>
       <Searchbox/>
-			<input id="restaurantSearchArea" type="text" name="search" placeholder="Search cuisine type"/>
-			<input id ="findButton" type="button" name="searchbutton" value="FIND"/>
       <h3>(currently in austin only)</h3>
 		</header>
 
