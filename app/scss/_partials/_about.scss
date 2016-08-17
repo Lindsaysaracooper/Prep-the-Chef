@@ -4,15 +4,19 @@
   h1{
     font-size: 4rem;
     font-family: $header-font;
+    background: #EC7244;
+    text-align: center;
   }
   h2{
     font-size: 2rem;
     font-family: $main-font;
+    text-align: center;
 
   }
   h3{
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-family: $main-font;
+    text-align: center;
 
   }
   p{
@@ -35,9 +39,4 @@
   span{
         font-size: 6rem;
   }
-}
-
-nav + .about{
-  background-color:white;
-  color: red;
 }

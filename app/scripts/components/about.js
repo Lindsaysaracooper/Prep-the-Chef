@@ -15,6 +15,7 @@ export default React.createClass({
           Do you have a hard time finding something on the menu that you can eat?
         </h2>
         <h3> Introducting <span> Prep the Chef </span> </h3>
+        <div class="aboutCopy">
         <p> Prep the Chef is the new ordering solution for those with severe allergies. We have partnered with local, high-end restuarants who would love to prepare food just for you. </p>
         <p> In the past, guests with allergies have had a much more limited menu as Chefs' often only prepare the kitchen for the items featured on their traditional dishes. Now, kitchens have enough advanced notice to buy ingredients and prep recipes so talented chefs can prepare dishes fit for your dietary needs.  </p>
 
@@ -33,7 +34,7 @@ export default React.createClass({
           </p>
           <img id = "customerPhoto" src="https://c1.staticflickr.com/5/4074/4894709118_d04583a76a_b.jpg" alt="Woman Eating" />
         </div>
-
+        </div>
       </div>
     )
 

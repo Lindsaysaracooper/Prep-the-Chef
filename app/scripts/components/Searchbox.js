@@ -1,5 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
+import {hashHistory} from 'react-router';
+
 
 
 export default React.createClass({
@@ -8,8 +10,7 @@ export default React.createClass({
   },
   searchChange: function(val){
     this.setState({selectedCuisine: val.value})
-    
-    // this.refs.searchBox.value = val.value
+    hashHistory.push(`search/?term=${val.value}`);
     },
 
   render:function(){

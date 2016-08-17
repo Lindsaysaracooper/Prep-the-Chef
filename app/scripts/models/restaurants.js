@@ -6,7 +6,8 @@ export default Backbone.Model.extend({
     name:'',
     cuisine: '',
     imgUrl:'',
-    rating:''
+    rating:'',
+    yelp: ''
 
   }
 });

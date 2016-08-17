@@ -41,11 +41,11 @@ h3{
 }
 
 .searchbox {
-  position: absolute;
-    width: 58%;
-    bottom: 97vh;
-    margin-left: 21%;
-    font-family: $main-font;
+  position: relative;
+  width: 58%;
+  margin-left: 21%;
+  font-family: $main-font;
+  bottom: 497px;
 }
 // how it works stylings
 

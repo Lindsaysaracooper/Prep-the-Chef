@@ -1,9 +1,9 @@
 import React from 'react';
 import Session from './models/session';
-import Restaurants from './collections/restaurants';
+import Restaurants from './collection/Restaurants';
 
 
 export default{
   session: new Session(),
-  Restaurants: new Restaurants()
+  restaurants: new Restaurants()
 };

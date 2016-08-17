@@ -71,11 +71,11 @@ header h3 {
   text-transform: uppercase; }
 
 .searchbox {
-  position: absolute;
+  position: relative;
   width: 58%;
-  bottom: 97vh;
   margin-left: 21%;
-  font-family: "Abel", sans-serif; }
+  font-family: "Abel", sans-serif;
+  bottom: 497px; }
 
 .howItWorks {
   position: absolute;
@@ -167,13 +167,17 @@ footer p {
 
 .about h1 {
   font-size: 4rem;
-  font-family: "Great Vibes", cursive; }
+  font-family: "Great Vibes", cursive;
+  background: #EC7244;
+  text-align: center; }
 .about h2 {
   font-size: 2rem;
-  font-family: "Abel", sans-serif; }
+  font-family: "Abel", sans-serif;
+  text-align: center; }
 .about h3 {
-  font-size: 1.5rem;
-  font-family: "Abel", sans-serif; }
+  font-size: 4rem;
+  font-family: "Abel", sans-serif;
+  text-align: center; }
 .about p {
   font-family: "Abel", sans-serif; }
 
@@ -189,10 +193,6 @@ footer p {
     margin: 0 5%; }
   .testimonial span {
     font-size: 6rem; }
-
-nav + .about {
-  background-color: white;
-  color: red; }
 
 /**
  * React Select

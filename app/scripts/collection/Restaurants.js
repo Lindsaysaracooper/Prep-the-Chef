@@ -1,6 +1,6 @@
 import Backbone from 'backbone';
 import $ from 'jquery';
-import searchModel from '../models/restaurants';
+import restaurants from '../models/restaurants';
 import settings from '../settings';
 
 
