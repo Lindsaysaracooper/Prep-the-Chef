@@ -1,13 +1,24 @@
 import React from 'react';
 import Select from 'react-select';
-import {hashHistory} from 'react-router';
-
+import {hashHistory, Link} from 'react-router';
+import store from '../store';
 
 
 export default React.createClass({
   getInitialState: function() {
-    return {}
+    return {authtoken: store.session.get('authtoken')}
   },
+  updateState: function(){
+
+    this.setState({authtoken: store.session.get('authtoken')});
+  },
+  componentDidMount: function (){
+    store.session.on('change', this.updateState);
+  },
+  componentWillUnmount:function(){
+    store.session.off('change',this.updateState)
+  },
+
   searchChange: function(val){
     this.setState({selectedCuisine: val.value})
     hashHistory.push(`search/?term=${val.value}`);
@@ -34,18 +45,24 @@ export default React.createClass({
       {value: 'Brazilian', label: 'Brazilian'},
     ];
 
+
+if(this.state.authtoken){
+  return(
+  <Select
+  name="form-field-name"
+  className="searchbox"
+  value={this.state.selectedCuisine}
+  placeholder='Select a Cuisine'
+  options={cuisines}
+  onChange={this.searchChange}
+  ref="searchBox"
+  />
+)
+}else{
+
 return(
-      <Select
-      name="form-field-name"
-      className="searchbox"
-      value={this.state.selectedCuisine}
-      placeholder='sometin cool'
-      options={cuisines}
-      onChange={this.searchChange}
-      ref="searchBox"
-      />
-    );
-  }
-
-
+  <Link to = "/home/login"><h3 className="loginNote"> LOGIN/SIGNUP </h3></Link>
+)
+}
+}
 });

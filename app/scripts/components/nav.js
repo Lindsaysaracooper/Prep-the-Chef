@@ -48,9 +48,9 @@ render:function(){
         id ="logoutButton"
         onClick ={this.logoutButton}
         to = "/home">Logout</Link>
+        <Link className ="navButton" id ="aboutButton" to = "/about">Learn More</Link>
         <Link className ="navButton" id ="dashboardButton" to = "/dashboard">Dashboard</Link>
         <Link className ="navButton" id ="searchButton"to = "/home">Search</Link>
-        <Link className ="navButton" id ="aboutButton" to = "/about">About</Link>
       </nav>
     )
     }else{
@@ -58,9 +58,8 @@ render:function(){
   return(
     <nav>
       <img src="http://wisushi.com/img/chef-icon-bottom-menu.png" alt="Chef Logo" />
-      <Link className ="navButton" id ="loginButton"to = "/home/login">Login</Link>
-      <Link className ="navButton" id ="searchButton"to = "/home">Search</Link>
-      <Link className ="navButton" id ="aboutButton" to = "/about">About</Link>
+
+      <Link className ="navButton" id ="aboutButton" to = "/about">Learn More</Link>
 
     </nav>
 
@@ -69,3 +68,7 @@ render:function(){
 }
 
 });
+
+
+// <Link className ="navButton" id ="loginButton"to = "/home/login">Login</Link>
+// <Link className ="navButton" id ="searchButton"to = "/home">Search</Link>

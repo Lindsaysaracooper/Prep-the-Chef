@@ -3,27 +3,25 @@
   // }
 
 nav{
-  margin-top: -9px;
   padding-top: 11px;
-  background-color: #2E2C2A;
-  opacity: .5;
-  height: 8vh;
+
 
   img{
   width: 4%;
   }
 }
 #aboutButton,  #searchButton, #dashboardButton, #loginButton, #logoutButton {
-  border: none;
-  text-decoration: none;
-  font-size: 1.5rem;
+    border: none;
+    text-decoration: none;
+    font-size: 1.5rem;
     margin-left: 5%;
-  opacity: .7;
-    background: #2E2C2A;
     color: white;
     float: right;
     font-family: 'Alegreya Sans SC', sans-serif;
     text-transform: uppercase;
+    color: black;
+    background: white;
+    opacity: 0.8;
 &:hover{
   color:$orange;
   border:none;
@@ -34,8 +32,11 @@ nav{
   }
 }
 
-#logoutButton{
-  margin-right:5%;
+#aboutButton, #logoutButton{
+  margin-right:3%;
+  color: black;
+background: white;
+opacity: 0.8;
 }
 
 header h3{

@@ -1,0 +1,53 @@
+.messageModal{
+  position: fixed;
+    background: #EBEBEB;
+    padding: 6vh 0px;
+    opacity: 0.9;
+    font-family: "Abel", sans-serif;
+    border: black solid 2px;
+    top: 5vh;
+    bottom: 5vh;
+    width: 60%;
+    margin-left: -10%;
+h1{
+  font-size: 2rem;
+  margin-top: -25px;
+}
+  h4{
+    margin-top:0;
+}
+h3, form{
+  font-size: 1.3rem;
+}
+#date{
+  margin-top: 0;
+}
+  }
+
+.textarea{
+  width: 80%;
+  border: none;
+margin-top: 10px;
+height:45px;
+}
+
+.messageButton{
+  border: none;
+background: white;
+font-size: 1.2rem;
+color:$orange;
+&:hover{
+  border:none;
+  transform: scale(1.1);
+  }
+}
+
+.backButton, .sendButton{
+border: none;
+background-color: #EBEBEB;
+font-size: 1.2rem;
+&:hover{
+  border:none;
+  transform: scale(1.1);
+  }
+}

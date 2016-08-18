@@ -1,10 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Abel|Great+Vibes";
 nav {
-  margin-top: -9px;
-  padding-top: 11px;
-  background-color: #2E2C2A;
-  opacity: .5;
-  height: 8vh; }
+  padding-top: 11px; }
   nav img {
     width: 4%; }
 
@@ -13,12 +9,13 @@ nav {
   text-decoration: none;
   font-size: 1.5rem;
   margin-left: 5%;
-  opacity: .7;
-  background: #2E2C2A;
   color: white;
   float: right;
   font-family: 'Alegreya Sans SC', sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: black;
+  background: white;
+  opacity: 0.8; }
   #aboutButton:hover, #searchButton:hover, #dashboardButton:hover, #loginButton:hover, #logoutButton:hover {
     color: #EC7244;
     border: none;
@@ -26,8 +23,11 @@ nav {
   #aboutButton:focus, #searchButton:focus, #dashboardButton:focus, #loginButton:focus, #logoutButton:focus {
     outline: 0; }
 
-#logoutButton {
-  margin-right: 5%; }
+#aboutButton, #logoutButton {
+  margin-right: 3%;
+  color: black;
+  background: white;
+  opacity: 0.8; }
 
 header h3 {
   position: relative;
@@ -142,6 +142,14 @@ header h3 {
   .exampleRestaurant .cuisineTypeExample {
     text-align: center;
     margin-top: 0; }
+
+.loginNote {
+  width: 20%;
+  background: #EC7244;
+  opacity: .7;
+  margin-left: 40%;
+  font-size: 2rem;
+  bottom: 44vh; }
 
 footer p {
   padding: 10vh;
@@ -501,5 +509,69 @@ footer p {
 @-webkit-keyframes Select-animation-spin {
   to {
     -webkit-transform: rotate(1turn); } }
+.searchResults h1 {
+  font-size: 4rem;
+  font-family: "Great Vibes", cursive;
+  text-align: center; }
+
+.results li {
+  margin-left: 26%;
+  width: 40%;
+  list-style: none;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  margin-bottom: 50px; }
+  .results li img {
+    width: 100%; }
+  .results li .rating {
+    font-size: 1.3rem; }
+  .results li a {
+    text-decoration: none;
+    color: #EC7244; }
+
+.messageModal {
+  position: fixed;
+  background: #EBEBEB;
+  padding: 6vh 0px;
+  opacity: 0.9;
+  font-family: "Abel", sans-serif;
+  border: black solid 2px;
+  top: 5vh;
+  bottom: 5vh;
+  width: 60%;
+  margin-left: -10%; }
+  .messageModal h1 {
+    font-size: 2rem;
+    margin-top: -25px; }
+  .messageModal h4 {
+    margin-top: 0; }
+  .messageModal h3, .messageModal form {
+    font-size: 1.3rem; }
+  .messageModal #date {
+    margin-top: 0; }
+
+.textarea {
+  width: 80%;
+  border: none;
+  margin-top: 10px;
+  height: 45px; }
+
+.messageButton {
+  border: none;
+  background: white;
+  font-size: 1.2rem;
+  color: #EC7244; }
+  .messageButton:hover {
+    border: none;
+    transform: scale(1.1); }
+
+.backButton, .sendButton {
+  border: none;
+  background-color: #EBEBEB;
+  font-size: 1.2rem; }
+  .backButton:hover, .sendButton:hover {
+    border: none;
+    transform: scale(1.1); }
 
 /*# sourceMappingURL=main.css.map */

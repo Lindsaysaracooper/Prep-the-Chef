@@ -15,7 +15,7 @@ render:function(){
     </video>
 			<h1>Prep the Chef</h1>
 			<h2>chat with the chef to prepare meals designed with you in mind.</h2>
-      <Searchbox/>
+      <Searchbox />
       <h3>(currently in austin only)</h3>
 		</header>
 

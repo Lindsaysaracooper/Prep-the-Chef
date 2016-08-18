@@ -11,6 +11,7 @@ import store from './store';
 import settings from './settings';
 import Search from './components/search';
 import MessageModal from './components/messageModal';
+import sentMessage from './components/sentMessage';
 
 $(document).ajaxSend(function(evt,xhr,jquerysettings){
   // console.log(document.location);
@@ -39,10 +40,11 @@ const router = (
   </Route>
       <Route path="/about" component={About}/>
       <Route path="/dashboard" component={Dashboard}/>
-      <Route path="/search" component={Search}/>
-          <Route path="message" component={MessageModal}/>
+      <Route path="/search" component={Search}>
+          <Route path="message" component={MessageModal} />
       </Route>
-
+      </Route>
+      <Route path="/sent" component={sentMessage}/>
 </Router>
   )
 ReactDOM.render(router,document.querySelector('.container'));

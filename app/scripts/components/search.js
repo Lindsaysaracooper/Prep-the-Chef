@@ -4,7 +4,7 @@ import store from '../store';
 import Searchbox from './Searchbox';
 import Restaurants from '../collection/Restaurants';
 import messageModal from './messageModal';
-
+import RestaurantInfo from './restaurantInfo';
 
 export default React.createClass({
 
@@ -19,42 +19,35 @@ export default React.createClass({
   },
   componentDidMount:function(){
       store.restaurants.fetch();
-    // store.restaurants.on('update change', this.updateState);
+    store.restaurants.on('update change', this.updateState);
   },
   componentWillUnmount:function(){
-    // store.restaurants.off('update change', this.updateState)
+    store.restaurants.off('update change', this.updateState)
   },
 
   render: function (){
-    console.log(this.state);
+
     let restaurants = this.state.restaurants.filter((restaurant,i,arr)=>{
-        return restaurant.cuisine === this.props.location.query.term
+        return restaurant.Cuisine.indexOf(this.props.location.query.term) !== -1;
       }).map((restaurant,i,arr)=>{
         return (
-          <li key={i}>
-            {restaurant.name}
-            <img src={restaurant.img}/>
-            {restaurant.rating}
-          </li>
+          <RestaurantInfo restaurant={restaurant} key={i}/>
         )
-      })
 
+      })
+let cuisine = this.props.location.query.term;
     // })//map to return  lis
     return(
       <div className="wholeSearch">
       <div className="searchResults">
-      <h1>Results</h1>
+      <h1>{cuisine} Restaurants In Your Area</h1>
       <ul className= "results">
        {restaurants}
-      </ul>
-      <Link
-      className ="messageButton"
-      to ="/search/message"> Message the Chef</Link>
+       </ul>
+      </div>
+      
 
       </div>
-
-      </div>
-
     )
 }
 });

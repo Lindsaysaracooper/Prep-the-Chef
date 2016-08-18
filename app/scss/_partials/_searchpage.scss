@@ -1,0 +1,29 @@
+.searchResults{
+  h1{
+    font-size: 4rem;
+    font-family: $header-font;
+    text-align: center;
+  }
+}
+
+.results li{
+  margin-left: 26%;
+  width: 40%;
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+    font-family: $main-font;
+    margin-bottom: 50px;
+    // background: #EBEBEB;
+    // padding: 4%;
+  img{
+    width: 100%;
+  }
+.rating{
+  font-size: 1.3rem;
+}
+a{
+  text-decoration: none;
+color: #EC7244;
+}
+}
