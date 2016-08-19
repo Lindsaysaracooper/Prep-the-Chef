@@ -1,6 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Abel|Great+Vibes";
 nav {
-  padding-top: 11px; }
+  padding-top: 11px;
+  position: relative;
+  z-index: 100; }
   nav img {
     width: 4%; }
 
@@ -15,7 +17,8 @@ nav {
   text-transform: uppercase;
   color: black;
   background: white;
-  opacity: 0.8; }
+  opacity: 0.8;
+  z-index: 100; }
   #aboutButton:hover, #searchButton:hover, #dashboardButton:hover, #loginButton:hover, #logoutButton:hover {
     color: #EC7244;
     border: none;
@@ -29,9 +32,7 @@ nav {
   background: white;
   opacity: 0.8; }
 
-header h3 {
-  position: relative;
-  margin-top: -116vh;
+.loginNote {
   text-align: center;
   color: white;
   font-size: 1.4rem; }
@@ -39,48 +40,42 @@ header h3 {
 video {
   width: 100%;
   overflow: hidden;
-  z-index: -1;
-  position: relative;
-  top: -142px; }
+  margin-top: -161px; }
 
-header h1 {
+header {
   position: absolute;
-  bottom: 53vh;
   width: 100%;
-  text-align: center;
-  font-size: 5.5rem;
-  color: white;
-  font-family: "Great Vibes", cursive; }
-header h2 {
-  text-align: center;
-  position: absolute;
-  bottom: 53vh;
-  width: 100%;
-  color: white;
-  font-family: "Abel", sans-serif;
-  text-transform: uppercase;
-  font-size: 1.7rem; }
-header h3 {
-  text-align: center;
-  color: white;
-  font-size: 1.4rem;
-  width: 100%;
-  position: absolute;
-  bottom: 38vh;
-  font-family: "Abel", sans-serif;
-  text-transform: uppercase; }
+  bottom: 24vh; }
+  header h1 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 5.5rem;
+    color: white;
+    font-family: "Great Vibes", cursive; }
+  header h2 {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-family: "Abel", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin-top: 0; }
+  header h3 {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    width: 100%;
+    font-family: "Abel", sans-serif;
+    text-transform: uppercase; }
 
 .searchbox {
-  position: relative;
   width: 58%;
   margin-left: 21%;
-  font-family: "Abel", sans-serif;
-  bottom: 497px; }
+  font-family: "Abel", sans-serif; }
 
 .howItWorks {
-  position: absolute;
   width: 100%;
-  top: 98vh;
   color: #2E2C2A; }
 
 .howItWorks h1 {
@@ -92,17 +87,14 @@ header h3 {
   padding-top: 5vh; }
 
 .howBox {
-  display: inline-flex;
+  display: inline-block;
   width: 30%;
   height: 33vh;
   padding-bottom: 5vh;
   text-transform: uppercase; }
   .howBox p {
-    position: absolute;
-    top: 53vh;
-    width: 24%;
     margin-left: 5%;
-    display: inline;
+    display: block;
     font-family: "Abel", sans-serif;
     margin-top: 30px; }
 
@@ -113,17 +105,17 @@ header h3 {
   color: #EC7244; }
 
 #right {
-  font-size: 2rem; }
+  font-size: 2rem;
+  position: relative;
+  bottom: 100px; }
 
-.examples {
-  margin-top: 46vh; }
-  .examples h1 {
-    color: #EC7244;
-    font-size: 4rem;
-    text-align: center;
-    font-family: "Great Vibes", cursive;
-    border-top: 2px dotted #2E2C2A;
-    padding-top: 5vh; }
+.examples h1 {
+  color: #EC7244;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  border-top: 2px dotted #2E2C2A;
+  padding-top: 5vh; }
 
 .exampleRestaurant {
   display: inline-block;
@@ -151,6 +143,82 @@ header h3 {
   font-size: 2rem;
   bottom: 44vh; }
 
+@media screen and (max-width: 768px) {
+  header {
+    bottom: 43vh; }
+
+  .exampleRestaurant {
+    width: 50%; } }
+@media screen and (max-width: 450px) {
+  video {
+    display: none; }
+
+  nav {
+    display: none; }
+
+  header {
+    background-image: url("assets/photos/panEdited.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: static;
+    height: 446px;
+    margin-top: -7px; }
+    header h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 3.4rem;
+      color: white;
+      font-family: "Great Vibes", cursive;
+      padding-top: 77px; }
+    header h2 {
+      text-align: center;
+      width: 100%;
+      color: white;
+      font-family: "Abel", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.9rem;
+      margin-top: 0; }
+    header h3 {
+      text-align: center;
+      color: white;
+      font-size: 1.2rem;
+      width: 100%;
+      font-family: "Abel", sans-serif;
+      text-transform: uppercase; }
+
+  .howItWorks h1 {
+    border-top: 0;
+    color: #EC7244;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    padding-top: 5vh;
+    margin-top: 0; }
+
+  .howBox {
+    width: 100%;
+    height: 33vh;
+    padding-bottom: 5vh;
+    text-transform: uppercase; }
+    .howBox p {
+      display: block;
+      font-family: "Abel", sans-serif;
+      text-align: center; }
+
+  #icon {
+    font-size: 6rem;
+    height: 21vh;
+    margin-top: 30px;
+    display: block; }
+
+  #right {
+    display: none; }
+
+  .exampleRestaurant {
+    width: 100%; } }
+.examples h1 {
+  border-top: 0; }
+
 footer p {
   padding: 10vh;
   background-color: #EC7244;
@@ -173,21 +241,23 @@ footer p {
   opacity: 0.9;
   font-family: "Abel", sans-serif; }
 
-.about h1 {
-  font-size: 4rem;
-  font-family: "Great Vibes", cursive;
-  background: #EC7244;
-  text-align: center; }
-.about h2 {
-  font-size: 2rem;
-  font-family: "Abel", sans-serif;
-  text-align: center; }
-.about h3 {
-  font-size: 4rem;
-  font-family: "Abel", sans-serif;
-  text-align: center; }
-.about p {
-  font-family: "Abel", sans-serif; }
+.about {
+  background-image: url("assets/photos/foodwallpaper.jpg"); }
+  .about h1 {
+    font-size: 4rem;
+    font-family: "Great Vibes", cursive;
+    background: #EC7244;
+    text-align: center; }
+  .about h2 {
+    font-size: 2rem;
+    font-family: "Abel", sans-serif;
+    text-align: center; }
+  .about h3 {
+    font-size: 4rem;
+    font-family: "Abel", sans-serif;
+    text-align: center; }
+  .about p {
+    font-family: "Abel", sans-serif; }
 
 .testimonial {
   display: flex; }
@@ -530,6 +600,18 @@ footer p {
     text-decoration: none;
     color: #EC7244; }
 
+@media screen and (max-width: 450px) {
+  .results li {
+    list-style: none;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "Abel", sans-serif;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: 0; }
+
+  .messageButton {
+    font-size: 1.8rem; } }
 .messageModal {
   position: fixed;
   background: #EBEBEB;
@@ -573,5 +655,21 @@ footer p {
   .backButton:hover, .sendButton:hover {
     border: none;
     transform: scale(1.1); }
+
+.userDashboard {
+  display: inline-block;
+  border-right: solid black 2px;
+  height: 100vh;
+  padding: 0 6%;
+  margin-top: 20px; }
+
+h2 {
+  font-family: "Abel", sans-serif; }
+
+.userDashboard {
+  display: inline-block; }
+
+.messageCenter {
+  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

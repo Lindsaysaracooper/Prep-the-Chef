@@ -14,6 +14,17 @@ updateState:function(){
   this.setState({messages:store.messages.toJSON()});
 },
 componentDidMount:function(){
+  if(store.session.get('_id')){
+    store.messages.fetch({
+      data:{
+        query:JSON.stringify({
+          _acl:{
+            creator: store.session.get('_id')
+          }
+        })
+      }
+    })
+  }else{
   store.session.once('change:_id', function() {
     store.messages.fetch({
       data:{
@@ -25,6 +36,7 @@ componentDidMount:function(){
       }
     })
   })
+}
 
   store.messages.on('update change', this.updateState);
 },
@@ -33,7 +45,7 @@ componentWillUnmount:function(){
 },
 
 deleteButton: function(){
-console.log(this.state)
+console.log(this.props)
 
 },
 
@@ -59,7 +71,7 @@ console.log(this.state)
         		</p>
         	</div>
         	<div className="messageCenter">
-        		<h1>MESSAGE CENTER</h1>
+        		<h2>MESSAGE CENTER</h2>
 
         		<ul className="eachMessage">
         			 {messages}

@@ -27,3 +27,21 @@ a{
 color: #EC7244;
 }
 }
+
+
+
+@media screen and (max-width: 450px) {
+
+.results li{
+   list-style: none;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "Abel", sans-serif;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: 0;
+}
+  .messageButton{
+    font-size: 1.8rem;
+  }
+}

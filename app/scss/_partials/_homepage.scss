@@ -1,17 +1,18 @@
+// Full screen stylings
 video{
   width: 100%;
-overflow: hidden;
-z-index: -1;
-position: relative;
-top: -142px;
-}
+      overflow: hidden;
+      margin-top: -161px;
+  }
 
 header {
+  position: absolute;;
+  width: 100%;
+    bottom: 24vh;
 
 h1{
-  position: absolute;
-  bottom: 53vh;
   width: 100%;
+  margin: 0;
   text-align: center;
   font-size: 5.5rem;
   color: white;
@@ -20,39 +21,32 @@ h1{
   }
 h2{
   text-align: center;
-  position: absolute;
-  bottom: 53vh;
   width: 100%;
   color:white;
   font-family: $main-font;
   text-transform: uppercase;
   font-size: 1.7rem;
+  margin-top: 0;
   }
 h3{
   text-align: center;
   color: white;
   font-size: 1.4rem;
   width: 100%;
-  position: absolute;
-  bottom: 38vh;
   font-family: $main-font;
   text-transform: uppercase;
 }
 }
 
 .searchbox {
-  position: relative;
   width: 58%;
   margin-left: 21%;
   font-family: $main-font;
-  bottom: 497px;
 }
 // how it works stylings
 
 .howItWorks{
-position: absolute;
-width: 100%;
-top: 98vh;
+  width: 100%;
 color:$gray;
 
 }
@@ -67,17 +61,14 @@ padding-top: 5vh;
 }
 
 .howBox{
-display: inline-flex;
+display: inline-block;
 width: 30%;
 height: 33vh;
 padding-bottom: 5vh;
 text-transform: uppercase;
 p{
-  position: absolute;
-  top: 53vh;
-  width: 24%;
   margin-left: 5%;
-  display: inline;
+  display: block;
   font-family: $main-font;
   margin-top: 30px;
 }
@@ -91,10 +82,11 @@ p{
 }
 #right{
   font-size: 2rem;
+  position: relative;
+  bottom: 100px;
 }
 
 .examples{
-  margin-top: 46vh;
 
 h1{
   color:$orange;
@@ -135,4 +127,101 @@ opacity: .7;
 margin-left: 40%;
 font-size: 2rem;
 bottom: 44vh;
+}
+
+
+
+@media screen and (max-width: 768px) {
+header{
+  bottom: 43vh;
+}
+.exampleRestaurant{
+    width: 50%;
+
+  }
+
+}
+@media screen and (max-width: 450px) {
+  video{
+    display:none;
+  }
+  nav{
+    display: none;
+  }
+  header{
+    background-image: url("assets/photos/panEdited.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: static;
+    height: 446px;
+    margin-top: -7px;
+    h1{
+      width: 100%;
+      text-align: center;
+      font-size: 3.4rem;
+      color: white;
+      font-family: "Great Vibes", cursive;
+      padding-top: 77px;
+
+      }
+    h2{
+      text-align: center;
+      width: 100%;
+      color:white;
+      font-family: $main-font;
+      text-transform: uppercase;
+      font-size: 1.9rem;
+      margin-top: 0;
+      }
+    h3{
+      text-align: center;
+      color: white;
+      font-size: 1.2rem;
+      width: 100%;
+      font-family: $main-font;
+      text-transform: uppercase;
+    }
+
+  }
+.howItWorks h1{
+border-top: 0;
+color: #EC7244;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    padding-top: 5vh;
+    margin-top: 0;
+}
+
+  .howBox{
+  width: 100%;
+  height: 33vh;
+  padding-bottom: 5vh;
+  text-transform: uppercase;
+
+  p{
+    display: block;
+    font-family: $main-font;
+    text-align: center;
+  }
+  }
+  #icon{
+    font-size: 6rem;
+    height: 21vh;
+    margin-top: 30px;
+    display: block;
+
+  }
+  #right{
+  display: none;
+  }
+
+.exampleRestaurant{
+    width: 100%;
+  }
+
+}
+
+.examples h1{
+  border-top: 0;
 }

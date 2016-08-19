@@ -4,7 +4,8 @@
 
 nav{
   padding-top: 11px;
-
+  position: relative;
+  z-index: 100;
 
   img{
   width: 4%;
@@ -22,6 +23,7 @@ nav{
     color: black;
     background: white;
     opacity: 0.8;
+    z-index: 100;
 &:hover{
   color:$orange;
   border:none;
@@ -38,10 +40,8 @@ nav{
 background: white;
 opacity: 0.8;
 }
-
-header h3{
-  position: relative;
-margin-top: -116vh;
+//
+.loginNote{
 text-align: center;
 color: white;
 font-size: 1.4rem;
