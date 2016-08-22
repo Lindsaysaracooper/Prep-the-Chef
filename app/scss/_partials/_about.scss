@@ -1,43 +1,103 @@
 
-
-.about{
+// nav{
+//   display:none;
+// }
+.aboutHeader{
   background-image: url("assets/photos/foodwallpaper.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  height:65vh;
+}
   h1{
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-family: $header-font;
-    background: #EC7244;
     text-align: center;
-  }
-  h2{
-    font-size: 2rem;
-    font-family: $main-font;
-    text-align: center;
+    margin-bottom: 0;
+        margin-top: 20vh;
 
   }
-  h3{
-    font-size: 4rem;
+  #know{
     font-family: $main-font;
+    margin-top: 0;
+    font-size: 3rem;
     text-align: center;
 
+
   }
-  p{
-    font-family: $main-font;
-  }
+
+h2{
+  text-align: center;
+  font-style: italic;
+  margin-top: 0;
+  width: 70%;
+  margin-left: 15%;
+}
+//   h3{
+//     font-family: $main-font;
+//     text-align: center;
+//     margin-top:0;
+//
+//   }
+//   p{
+//     font-family: $main-font;
+//   }
+// }
+
+// #leftSide {
+//   display: inline-block;
+//   width: 48%;
+//   border-right: 2px solid black;
+//   height: 125px;
+//   padding-top: 50px;
+//   text-align:center;
+// }
+// #rightSide{
+//   display: inline-block;
+//       width: 48%;
+//       text-align:center;
+// }
+
+.aboutCopy h1{
+  margin-bottom: 20px;
 }
 
-.testimonial{
-  display:flex;
-  img{
-    width: 18%;
-    height: 10%;
-  }
-  p{
-    padding-top: 17vh;
-    font-style: italic;
-    font-size: 1.4rem;
-    margin: 0 5%;
-  }
-  span{
-        font-size: 6rem;
-  }
+.testimonial1{
+display:inline-block;
+width: 45%;
+margin-left: 10%;
+
+img{
+  margin-left: 13%;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+p{
+  text-align: center;
+  font-style: italic;
+  width: 74%;
+}
+span{
+      font-size: 6rem;
+}
+}
+.testimonial2{
+display:inline-block;
+width: 45%;
+img{
+  margin-left: 13%;
+  width: 60%;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+p{
+  text-align: center;
+  font-style: italic;
+  width: 74%;
+}
+span{
+      font-size: 6rem;
+}
 }

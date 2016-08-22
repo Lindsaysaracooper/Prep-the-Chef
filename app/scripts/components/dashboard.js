@@ -2,6 +2,8 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import store from '../store';
 import Restaurants from '../collection/Restaurants'
+import ReactFilepicker from 'react-filepicker';
+import settings from '../settings';
 
 export default React.createClass({
 getInitialState:function(){
@@ -49,6 +51,10 @@ console.log(this.props)
 
 },
 
+photoShow:function(files){
+console.log(files)
+},
+
 
   render:function (e){
 
@@ -61,12 +67,27 @@ console.log(this.props)
           </li>
         )
       })
+      const options = {
+  buttonText: 'Pick Me',
+  buttonClass: 'filepicker',
+  mimetype: 'image/*',
+  container: 'window',
+  services: ['COMPUTER', 'FACEBOOK', 'CLOUDAPP']
+};
+console.log(settings.api)
 
       return(
         <div className="dashboard">
         	<div className="userDashboard">
         		<h2>Your Account</h2>
-        		<img src="x" alt="Your photo" />
+            <img src= "assets/photos/pic.jpg"/>
+
+            <input type="filepicker-dragdrop"
+            data-fp-apikey="AhTgLagciQByzXpFGRI0Az"
+            data-fp-mimetypes="image/*"
+            data-fp-container="modal"
+            data-fp-store-location="gcs" onChange={this.photoShow}/>
+
         		<p>
         		</p>
         	</div>
@@ -84,3 +105,10 @@ console.log(this.props)
   }
 
 });
+
+
+// <ReactFilepicker
+// apikey={settings.api}
+// onClick={console.log('WHY WONT YOU WORK')}
+// onSuccess={this.photoShow}
+// options={options}/>

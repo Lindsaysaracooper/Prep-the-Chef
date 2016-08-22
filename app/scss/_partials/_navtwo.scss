@@ -1,0 +1,121 @@
+  // nav img{
+  //       width: 4%;
+  // }
+
+// nav{
+//   padding-top: 11px;
+//   position: relative;
+//   z-index: 100;
+//
+//   img{
+//   width: 4%;
+//   }
+// }
+// #aboutButton,  #searchButton, #dashboardButton, #loginButton, #logoutButton {
+//     border: none;
+//     text-decoration: none;
+//     font-size: 1.5rem;
+//     margin-left: 5%;
+//     color: white;
+//     float: right;
+//     font-family: 'Alegreya Sans SC', sans-serif;
+//     text-transform: uppercase;
+//     color: black;
+//     background: white;
+//     opacity: 0.8;
+//     z-index: 100;
+// &:hover{
+//   color:$orange;
+//   border:none;
+//   transform: scale(1.1);
+//   }
+// &:focus {
+//   outline:0;
+//   }
+// }
+//
+// #aboutButton, #logoutButton{
+//   margin-right:3%;
+//   color: black;
+// background: white;
+// opacity: 0.8;
+// }
+// //
+// .loginNote{
+// text-align: center;
+// color: white;
+// font-size: 1.4rem;
+// }
+//
+//
+//
+
+.navButton{
+  display: block;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-family: $main-font;
+  font-size: 2rem;
+    margin-bottom: 10px;
+
+&:hover{
+  border:none;
+  transform: scale(1.1);
+  }
+&:focus {
+  outline:0;
+  }
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $orange;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: $orange;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  img{
+    display: block;
+outline: none;
+width: 75%;
+border-radius: 59%;
+margin-bottom: 24px;
+  }
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

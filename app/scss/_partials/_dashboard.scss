@@ -12,9 +12,23 @@ h2{
 
 
 .userDashboard{
-display: inline-block;
+  float:left;
+  width: 20%;
 }
 
 .messageCenter{
+  background-image: url("assets/photos/foodwallpaper.jpg");
+  background-repeat: no-repeat;
   display:inline-block;
+  height:100vh;
+  width: 78%;
+}
+
+.dashboard{
+  img{
+width: 100%;
+outline: none;
+border-radius: 59%;
+margin-bottom: 24px;
+  }
 }

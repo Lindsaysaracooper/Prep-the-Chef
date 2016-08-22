@@ -1,41 +1,65 @@
 @import "https://fonts.googleapis.com/css?family=Abel|Great+Vibes";
-nav {
-  padding-top: 11px;
-  position: relative;
-  z-index: 100; }
-  nav img {
-    width: 4%; }
+body {
+  margin: 0; }
 
-#aboutButton, #searchButton, #dashboardButton, #loginButton, #logoutButton {
-  border: none;
+.container {
+  background: #EBEBEB; }
+
+.navButton {
+  display: block;
   text-decoration: none;
-  font-size: 1.5rem;
-  margin-left: 5%;
   color: white;
-  float: right;
-  font-family: 'Alegreya Sans SC', sans-serif;
   text-transform: uppercase;
-  color: black;
-  background: white;
-  opacity: 0.8;
-  z-index: 100; }
-  #aboutButton:hover, #searchButton:hover, #dashboardButton:hover, #loginButton:hover, #logoutButton:hover {
-    color: #EC7244;
+  font-family: "Abel", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px; }
+  .navButton:hover {
     border: none;
     transform: scale(1.1); }
-  #aboutButton:focus, #searchButton:focus, #dashboardButton:focus, #loginButton:focus, #logoutButton:focus {
+  .navButton:focus {
     outline: 0; }
 
-#aboutButton, #logoutButton {
-  margin-right: 3%;
-  color: black;
-  background: white;
-  opacity: 0.8; }
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px; }
 
-.loginNote {
-  text-align: center;
-  color: white;
-  font-size: 1.4rem; }
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #EC7244; }
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px; }
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7; }
+
+/* General sidebar styles */
+.bm-menu {
+  background: #EC7244;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em; }
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47; }
+
+/* Wrapper for item list */
+.bm-item-list img {
+  display: block;
+  outline: none;
+  width: 75%;
+  border-radius: 59%;
+  margin-bottom: 24px; }
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3); }
 
 video {
   width: 100%;
@@ -46,6 +70,8 @@ header {
   position: absolute;
   width: 100%;
   bottom: 24vh; }
+  header a {
+    text-decoration: none; }
   header h1 {
     width: 100%;
     margin: 0;
@@ -83,7 +109,6 @@ header {
   font-size: 4rem;
   text-align: center;
   font-family: "Great Vibes", cursive;
-  border-top: 2px dotted #2E2C2A;
   padding-top: 5vh; }
 
 .howBox {
@@ -114,7 +139,6 @@ header {
   font-size: 4rem;
   text-align: center;
   font-family: "Great Vibes", cursive;
-  border-top: 2px dotted #2E2C2A;
   padding-top: 5vh; }
 
 .exampleRestaurant {
@@ -215,10 +239,15 @@ header {
     display: none; }
 
   .exampleRestaurant {
-    width: 100%; } }
-.examples h1 {
-  border-top: 0; }
+    width: 100%; }
 
+  .examples h1 {
+    color: #EC7244;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    border: 2px solid white;
+    padding-top: 5vh; } }
 footer p {
   padding: 10vh;
   background-color: #EC7244;
@@ -241,35 +270,66 @@ footer p {
   opacity: 0.9;
   font-family: "Abel", sans-serif; }
 
-.about {
-  background-image: url("assets/photos/foodwallpaper.jpg"); }
-  .about h1 {
-    font-size: 4rem;
-    font-family: "Great Vibes", cursive;
-    background: #EC7244;
-    text-align: center; }
-  .about h2 {
-    font-size: 2rem;
-    font-family: "Abel", sans-serif;
-    text-align: center; }
-  .about h3 {
-    font-size: 4rem;
-    font-family: "Abel", sans-serif;
-    text-align: center; }
-  .about p {
-    font-family: "Abel", sans-serif; }
+.aboutHeader {
+  background-image: url("assets/photos/foodwallpaper.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  height: 65vh; }
 
-.testimonial {
-  display: flex; }
-  .testimonial img {
-    width: 18%;
-    height: 10%; }
-  .testimonial p {
-    padding-top: 17vh;
+h1 {
+  font-size: 4.5rem;
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 20vh; }
+
+#know {
+  font-family: "Abel", sans-serif;
+  margin-top: 0;
+  font-size: 3rem;
+  text-align: center; }
+
+h2 {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0;
+  width: 70%;
+  margin-left: 15%; }
+
+.aboutCopy h1 {
+  margin-bottom: 20px; }
+
+.testimonial1 {
+  display: inline-block;
+  width: 45%;
+  margin-left: 10%; }
+  .testimonial1 img {
+    margin-left: 13%;
+    width: 300px;
+    height: 400px;
+    overflow: hidden; }
+  .testimonial1 p {
+    text-align: center;
     font-style: italic;
-    font-size: 1.4rem;
-    margin: 0 5%; }
-  .testimonial span {
+    width: 74%; }
+  .testimonial1 span {
+    font-size: 6rem; }
+
+.testimonial2 {
+  display: inline-block;
+  width: 45%; }
+  .testimonial2 img {
+    margin-left: 13%;
+    width: 60%;
+    width: 300px;
+    height: 400px;
+    overflow: hidden; }
+  .testimonial2 p {
+    text-align: center;
+    font-style: italic;
+    width: 74%; }
+  .testimonial2 span {
     font-size: 6rem; }
 
 /**
@@ -582,7 +642,12 @@ footer p {
 .searchResults h1 {
   font-size: 4rem;
   font-family: "Great Vibes", cursive;
-  text-align: center; }
+  text-align: center;
+  margin-top: 0;
+  padding-top: 30px; }
+
+.messageButton {
+  background: #EBEBEB; }
 
 .results li {
   margin-left: 26%;
@@ -641,7 +706,7 @@ footer p {
 
 .messageButton {
   border: none;
-  background: white;
+  background: #EBEBEB;
   font-size: 1.2rem;
   color: #EC7244; }
   .messageButton:hover {
@@ -667,9 +732,20 @@ h2 {
   font-family: "Abel", sans-serif; }
 
 .userDashboard {
-  display: inline-block; }
+  float: left;
+  width: 20%; }
 
 .messageCenter {
-  display: inline-block; }
+  background-image: url("assets/photos/foodwallpaper.jpg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 100vh;
+  width: 78%; }
+
+.dashboard img {
+  width: 100%;
+  outline: none;
+  border-radius: 59%;
+  margin-bottom: 24px; }
 
 /*# sourceMappingURL=main.css.map */

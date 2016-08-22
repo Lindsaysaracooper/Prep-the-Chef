@@ -1,9 +1,15 @@
+body{
+  margin:0;
+}
 
+.container{
+  background: #EBEBEB;
+}
 @import './_partials/variables';
 
 
 // All Partial Files
-@import './_partials/nav';
+@import './_partials/navtwo';
 @import './_partials/homepage';
 @import './_partials/footer';
 @import './_partials/login';

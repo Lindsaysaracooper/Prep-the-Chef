@@ -9,7 +9,9 @@ header {
   position: absolute;;
   width: 100%;
     bottom: 24vh;
-
+a{
+  text-decoration: none;
+}
 h1{
   width: 100%;
   margin: 0;
@@ -55,7 +57,6 @@ color:$orange;
 font-size: 4rem;
 text-align: center;
 font-family: $header-font;
-border-top: 2px dotted $gray;
 padding-top: 5vh;
 
 }
@@ -93,7 +94,6 @@ h1{
   font-size: 4rem;
   text-align: center;
   font-family: $header-font;
-  border-top: 2px dotted $gray;
   padding-top: 5vh;
   }
 }
@@ -220,8 +220,17 @@ color: #EC7244;
     width: 100%;
   }
 
-}
 
-.examples h1{
-  border-top: 0;
+
+.examples{
+
+h1{
+  color:$orange;
+  font-size: 4rem;
+  text-align: center;
+  font-family: $header-font;
+  border: 2px solid white;
+  padding-top: 5vh;
+  }
+}
 }

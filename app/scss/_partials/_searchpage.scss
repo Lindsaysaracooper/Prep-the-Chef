@@ -3,9 +3,14 @@
     font-size: 4rem;
     font-family: $header-font;
     text-align: center;
+    margin-top: 0;
+    padding-top: 30px;
   }
 }
 
+.messageButton{
+      background: #EBEBEB;
+}
 .results li{
   margin-left: 26%;
   width: 40%;

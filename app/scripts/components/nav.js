@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Login from './login';
 import About from './about';
 import store from './../store';
-
+import BurgerMenu from 'react-burger-menu';
 
 
 
