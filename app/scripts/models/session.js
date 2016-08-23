@@ -6,6 +6,33 @@ import settings from '../settings';
 
 
 export default Backbone.Model.extend({
+  urlRoot: `https:/baas.kinvey.com/user/${settings.appId}/`,
+  idAttribute: '_id',
+  defaults:{
+    favorites:[]
+  },
+  addFavorite:function(data){
+    let oldFavorites=this.get('favorites');
+    let newFavorites= oldFavorites.concat(data);
+    this.set('favorites',newFavorites);
+    this.save();
+  },
+
+  remove:function(data){
+    $.ajax({
+     type: 'DELETE',
+     url: `https://baas.kinvey.com/appdata/${settings.appId}/favorites`,
+     // data: JSON.stringify({username: username}),
+     dataType: 'application/json',
+     success: (response) => {
+       console.log(response);
+     },
+     error: (err) => {
+       console.log(err);
+     }
+ })
+ },
+
   login:function(data){
     $.ajax({
       type:'POST',

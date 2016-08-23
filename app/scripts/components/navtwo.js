@@ -35,8 +35,8 @@ export default React.createClass({
     return (
       <Menu>
       <img src= "assets/photos/pic.jpg"/>
+      <Link className ="navButton" id ="searchButton"to = "/home">Home </Link>
       <Link className ="navButton" id ="dashboardButton" to = "/dashboard">Dashboard</Link>
-      <Link className ="navButton" id ="searchButton"to = "/home">Search</Link>
         <Link className ="navButton" id ="aboutButton" to = "/about">Learn More</Link>
       <Link className ="navButton"
       id ="logoutButton"

@@ -43,7 +43,7 @@ render:function(){
     //   ])
     return (
       <nav>
-        <img src="http://wisushi.com/img/chef-icon-bottom-menu.png" alt="Chef Logo" />
+        <img className ="logo" src="assets/photos/chefLogo" alt="Chef Logo" />
         <Link className ="navButton"
         id ="logoutButton"
         onClick ={this.logoutButton}

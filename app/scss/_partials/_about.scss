@@ -8,7 +8,7 @@
   overflow: hidden;
   width: 100%;
   height:65vh;
-}
+
   h1{
     font-size: 4.5rem;
     font-family: $header-font;
@@ -17,51 +17,30 @@
         margin-top: 20vh;
 
   }
-  #know{
-    font-family: $main-font;
-    margin-top: 0;
-    font-size: 3rem;
-    text-align: center;
-
-
-  }
 
 h2{
   text-align: center;
-  font-style: italic;
   margin-top: 0;
   width: 70%;
   margin-left: 15%;
 }
-//   h3{
-//     font-family: $main-font;
-//     text-align: center;
-//     margin-top:0;
-//
-//   }
-//   p{
-//     font-family: $main-font;
-//   }
-// }
-
-// #leftSide {
-//   display: inline-block;
-//   width: 48%;
-//   border-right: 2px solid black;
-//   height: 125px;
-//   padding-top: 50px;
-//   text-align:center;
-// }
-// #rightSide{
-//   display: inline-block;
-//       width: 48%;
-//       text-align:center;
-// }
-
-.aboutCopy h1{
-  margin-bottom: 20px;
 }
-
+.aboutCopy{
+  border: 2px solid black;
+    padding-top: 30px;
+    width: 70%;
+margin-left: 15%;
+margin-top: 30px;
+h3{
+font-family: $header-font;
+margin-top: 0;
+font-size: 3rem;
+text-align: center;
+}
+h2{
+  text-align: center;
+}
+}
 .testimonial1{
 display:inline-block;
 width: 45%;
@@ -70,17 +49,26 @@ margin-left: 10%;
 img{
   margin-left: 13%;
   width: 300px;
-  height: 400px;
+  // height: 400px;
   overflow: hidden;
 }
 p{
   text-align: center;
   font-style: italic;
-  width: 74%;
+      width: 400px;
 }
 span{
       font-size: 6rem;
 }
+}
+
+#testimonial{
+  margin-top: 30px;
+  font-family: $header-font;
+  // margin-top: 0;
+  font-size: 3rem;
+  text-align: center;
+
 }
 .testimonial2{
 display:inline-block;
@@ -89,15 +77,61 @@ img{
   margin-left: 13%;
   width: 60%;
   width: 300px;
-  height: 400px;
+  // height: 400px;
   overflow: hidden;
 }
 p{
   text-align: center;
   font-style: italic;
-  width: 74%;
+width: 435px;
 }
 span{
       font-size: 6rem;
+}
+}
+
+
+@media screen and (min-device-width: 824px) and (max-width: 990px) {
+  .testimonial1, .testimonial2{
+  display:block;
+  width: 40%;
+margin-left: 30%;
+  img{
+    width: 80%;
+    margin-left: 10%;
+  }
+  p{
+    width: 100%;
+  }
+
+}
+}
+
+@media screen and (max-width: 824px) {
+  .testimonial1, .testimonial2{
+  display:block;
+  width: 40%;
+margin-left: 30%;
+  img{
+    width: 100%;
+
+  }
+  p{
+    width: 100%;
+  }
+
+}
+}
+
+@media screen and (max-width: 450px) {
+  .aboutHeader{
+        height: 79vh;
+  }
+  .testimonial1, .testimonial2{
+  display:block;
+  p{
+    width: 100%;
+  }
+
 }
 }

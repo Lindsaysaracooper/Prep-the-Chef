@@ -7,5 +7,5 @@ import Messages from './collection/Messages';
 export default{
   session: new Session(),
   restaurants: new Restaurants(),
-  messages: new Messages()
+  messages: new Messages(),
 };

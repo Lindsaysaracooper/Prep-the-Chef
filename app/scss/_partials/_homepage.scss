@@ -14,7 +14,7 @@ a{
 }
 h1{
   width: 100%;
-  margin: 0;
+  margin-top: 0;
   text-align: center;
   font-size: 5.5rem;
   color: white;
@@ -132,8 +132,23 @@ bottom: 44vh;
 
 
 @media screen and (max-width: 768px) {
+  video{
+    display:none;
+  }
 header{
-  bottom: 43vh;
+  background-image: url("assets/photos/panEdited.png");
+  background-size: cover;
+    position: inherit;
+        height: 300px;
+  h1{
+    font-size: 4rem;
+  }
+  h2{
+    font-size: 1.4rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
 }
 .exampleRestaurant{
     width: 50%;
@@ -141,6 +156,14 @@ header{
   }
 
 }
+
+
+@media screen and (max-width: 930px) {
+  header{
+    bottom: 41vh;
+  }
+}
+
 @media screen and (max-width: 450px) {
   video{
     display:none;

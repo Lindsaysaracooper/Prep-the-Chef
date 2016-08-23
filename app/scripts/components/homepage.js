@@ -13,6 +13,7 @@ render:function(){
      <source src="assets/videos/cooking.mp4" type="video/mp4"/>
     </video>
     <header>
+
 			<h1>Prep the Chef</h1>
 			<h2>chat with the chef to prepare meals designed with you in mind.</h2>
       <Searchbox />

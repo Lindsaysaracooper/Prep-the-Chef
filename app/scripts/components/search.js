@@ -30,8 +30,14 @@ export default React.createClass({
     let restaurants = this.state.restaurants.filter((restaurant,i,arr)=>{
         return restaurant.Cuisine.indexOf(this.props.location.query.term) !== -1;
       }).map((restaurant,i,arr)=>{
+    let favArray= store.session.get('favorites').indexOf(restaurant._id)
+    let liked = false;
+      if (favArray !== -1){
+      liked=true
+    }
         return (
-          <RestaurantInfo restaurant={restaurant} key={i}/>
+          <RestaurantInfo liked={liked} restaurant={restaurant} key={i}/>
+
         )
 
       })
@@ -45,7 +51,7 @@ let cuisine = this.props.location.query.term;
        {restaurants}
        </ul>
       </div>
-      
+
 
       </div>
     )

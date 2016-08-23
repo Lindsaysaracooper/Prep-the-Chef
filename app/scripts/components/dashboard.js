@@ -8,12 +8,19 @@ import settings from '../settings';
 export default React.createClass({
 getInitialState:function(){
   return{
-    messages:[]
+    messages:[],
+    favorites:[],
+    restaurants:[]
   };
 
 },
 updateState:function(){
-  this.setState({messages:store.messages.toJSON()});
+  this.setState({
+    messages:store.messages.toJSON(),
+    favorites:store.session.get('favorites'),
+    restaurants:store.restaurants.toJSON()
+  });
+
 },
 componentDidMount:function(){
   if(store.session.get('_id')){
@@ -28,6 +35,8 @@ componentDidMount:function(){
     })
   }else{
   store.session.once('change:_id', function() {
+    store.restaurants.fetch({
+    })
     store.messages.fetch({
       data:{
         query:JSON.stringify({
@@ -41,13 +50,17 @@ componentDidMount:function(){
 }
 
   store.messages.on('update change', this.updateState);
+  store.session.on('change', this.updateState);
+  store.restaurants.on('update change', this.updateState);
 },
 componentWillUnmount:function(){
-  store.messages.off('update change', this.updateState)
+  store.messages.off('update change', this.updateState);
+    store.session.off('change', this.updateState);
+    store.restaurants.off('update change', this.updateState);
 },
 
-deleteButton: function(){
-console.log(this.props)
+removeButton: function(){
+session.favorites.removeButton(this.props);
 
 },
 
@@ -74,7 +87,36 @@ console.log(files)
   container: 'window',
   services: ['COMPUTER', 'FACEBOOK', 'CLOUDAPP']
 };
-console.log(settings.api)
+
+let places=[];
+let favorites = this.state.favorites.filter((favoriteId,i,arr)=>{
+if (places.indexOf(favoriteId)=== -1){
+  places.push(favoriteId);
+  return true;
+
+}else{
+  return false;
+}
+}).map((favoriteId,i,arr)=>{
+  console.log('looking for resatuant');
+  if(store.restaurants.get(favoriteId)){
+    console.log('found the restaurant');
+  let favoriteSpot = store.restaurants.get(favoriteId).toJSON();
+// console.log(favoriteSpot.toJSON())
+
+// console.log(message.restaurant, message.date);
+    return (
+      <li key={i}><i className="fa fa-heart" aria-hidden="true"></i>  {favoriteSpot.Name}
+      <input
+      type="button"
+      name="delete"
+      value="Remove"
+      onClick={this.removeButton}/>
+      </li>
+
+    )
+  }
+  })
 
       return(
         <div className="dashboard">
@@ -90,6 +132,8 @@ console.log(settings.api)
 
         		<p>
         		</p>
+            <h2> Your Favorites </h2>
+              {favorites}
         	</div>
         	<div className="messageCenter">
         		<h2>MESSAGE CENTER</h2>
