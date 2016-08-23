@@ -3,6 +3,7 @@ import login from '../components/login';
 import store from '../store';
 import $ from 'jquery';
 import settings from '../settings';
+import _ from 'underscore';
 
 
 export default Backbone.Model.extend({
@@ -11,17 +12,27 @@ export default Backbone.Model.extend({
   defaults:{
     favorites:[]
   },
-  addFavorite:function(data){
+  toggleFavorite:function(data){
     let oldFavorites=this.get('favorites');
-    let newFavorites= oldFavorites.concat(data);
-    this.set('favorites',newFavorites);
-    this.save();
+    let newFavorites;
+    if(oldFavorites.indexOf(data)=== -1){
+      newFavorites= oldFavorites.concat(data);
+
+    }else{
+      newFavorites= _.without(oldFavorites, data)
+
+    }
+
+      this.set('favorites',newFavorites);
+      this.save();
+
+
   },
 
   remove:function(data){
     $.ajax({
      type: 'DELETE',
-     url: `https://baas.kinvey.com/appdata/${settings.appId}/favorites`,
+     url: `https://baas.kinvey.com/appdata/${settings.appId}/messages`,
      // data: JSON.stringify({username: username}),
      dataType: 'application/json',
      success: (response) => {
@@ -44,7 +55,8 @@ export default Backbone.Model.extend({
         this.set({
           username: s.username,
           authtoken: s._kmd.authtoken,
-          _id:s._id
+          _id:s._id,
+          favorites:s.favorites
         })
       },
       error:function(e){console.log(e);}
@@ -56,13 +68,18 @@ export default Backbone.Model.extend({
     $.ajax({
       type:'POST',
       url: `https:/baas.kinvey.com/user/${settings.appId}`,
-      data: JSON.stringify({username:data.username, password: data.password}),
+      data: JSON.stringify({username:data.username,
+        password: data.password,
+        favorites:[]
+      }
+      ),
       contentType: 'application/json',
       success:(s) => {
           localStorage.authtoken= s._kmd.authtoken;
         this.set({
           username: s.username,
           authtoken: s._kmd.authtoken,
+          favorites:s.favorites,
           _id:s._id
 
         })

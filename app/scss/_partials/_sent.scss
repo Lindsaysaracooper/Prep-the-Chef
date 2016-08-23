@@ -1,0 +1,16 @@
+.sent{
+  text-align: center;
+    background: white;
+    font-family: $main-font;
+    p{
+          font-size: 1.4rem;
+          margin: 0;
+    }
+    a{
+      text-decoration: none;
+      color:#EC7244;
+    a:hover{
+        transform: scale(1.1);
+        }
+    }
+    }

@@ -308,10 +308,11 @@ footer p {
   padding-top: 30px;
   width: 70%;
   margin-left: 15%;
-  margin-top: 30px; }
+  margin-top: 30px;
+  background: white; }
   .aboutCopy h3 {
     font-family: "Great Vibes", cursive;
-    margin-top: 0;
+    margin: 0;
     font-size: 3rem;
     text-align: center; }
   .aboutCopy h2 {
@@ -713,11 +714,11 @@ footer p {
     text-decoration: none;
     color: #EC7244; }
 
-.heart {
+.fa-heart {
   float: left; }
 
-#heart {
-  color: red; }
+.heart {
+  color: #EC7244; }
 
 @media screen and (max-width: 450px) {
   .results li {
@@ -733,9 +734,8 @@ footer p {
     font-size: 1.8rem; } }
 .messageModal {
   position: fixed;
-  background: #EBEBEB;
+  background: white;
   padding: 6vh 0px;
-  opacity: 0.9;
   font-family: "Abel", sans-serif;
   border: black solid 2px;
   top: 5vh;
@@ -746,58 +746,134 @@ footer p {
     font-size: 2rem;
     margin-top: -25px; }
   .messageModal h4 {
+    display: inline-block;
     margin-top: 0; }
   .messageModal h3, .messageModal form {
     font-size: 1.3rem; }
   .messageModal #date {
-    margin-top: 0; }
+    margin-top: 0;
+    height: 25px;
+    font-size: 1.2rem;
+    text-align: center; }
 
 .textarea {
   width: 80%;
-  border: none;
   margin-top: 10px;
-  height: 45px; }
+  height: 45px;
+  border: 2px solid black; }
 
 .messageButton {
   border: none;
   background: #EBEBEB;
   font-size: 1.2rem;
-  color: #EC7244; }
+  color: #EC7244;
+  float: right; }
   .messageButton:hover {
     border: none;
     transform: scale(1.1); }
 
 .backButton, .sendButton {
+  font-family: "Abel", sans-serif;
   border: none;
-  background-color: #EBEBEB;
-  font-size: 1.2rem; }
+  background-color: white;
+  font-size: 2rem;
+  margin: 0 2px; }
   .backButton:hover, .sendButton:hover {
-    border: none;
     transform: scale(1.1); }
 
+#line {
+  font-size: 2rem; }
+
+.dashHeader h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 0; }
+.dashHeader p {
+  text-align: center;
+  margin-top: 0;
+  font-family: "Abel", sans-serif;
+  font-size: 1.2rem; }
+
+.dashHeader {
+  background-image: url("assets/photos/foodwallpaper.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  height: 65vh; }
+
 .userDashboard {
-  display: inline-block;
-  border-right: solid black 2px;
-  height: 100vh;
   padding: 0 6%;
-  margin-top: 20px; }
-
-h2 {
-  font-family: "Abel", sans-serif; }
-
-.userDashboard {
   float: left;
-  width: 20%; }
+  width: 20%;
+  font-family: "Abel", sans-serif; }
+  .userDashboard li {
+    list-style: none;
+    font-size: 1rem;
+    background: white;
+    margin: 10px;
+    padding: 8px;
+    width: 100%; }
+  .userDashboard .removeButton {
+    border: none;
+    float: right;
+    background: #EBEBEB; }
+  .userDashboard h2 {
+    font-family: "Abel", sans-serif;
+    font-size: 2rem; }
 
 .messageCenter {
   display: inline-block;
   width: 60%;
   height: 200vh; }
+  .messageCenter h2 {
+    font-family: "Abel", sans-serif;
+    font-size: 2rem;
+    text-align: center; }
 
 .dashboard img {
-  width: 100%;
-  outline: none;
-  border-radius: 59%;
-  margin-bottom: 24px; }
+  width: 24%;
+  overflow: hidden;
+  margin-right: 13px;
+  margin-left: -8px;
+  float: left;
+  height: 100%; }
+
+.eachMessage {
+  font-family: "Abel", sans-serif; }
+  .eachMessage li {
+    background: white;
+    list-style: none;
+    padding-left: 10px;
+    height: 150px; }
+  .eachMessage .to {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    margin-top: -35px; }
+  .eachMessage .message {
+    padding-left: 8%; }
+  .eachMessage .allergy {
+    display: inline; }
+  .eachMessage .reservation {
+    text-align: right; }
+  .eachMessage .diet {
+    font-weight: bold; }
+
+.likey {
+  margin-right: 5px;
+  color: #EC7244; }
+
+.sent {
+  text-align: center;
+  background: white;
+  font-family: "Abel", sans-serif; }
+  .sent p {
+    font-size: 1.4rem;
+    margin: 0; }
+  .sent a {
+    text-decoration: none;
+    color: #EC7244; }
+    .sent a a:hover {
+      transform: scale(1.1); }
 
 /*# sourceMappingURL=main.css.map */

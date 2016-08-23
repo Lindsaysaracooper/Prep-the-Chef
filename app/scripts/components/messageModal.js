@@ -29,7 +29,7 @@ componentWillUnmount:function(){
 },
 sendHandler:function(e){
   e.preventDefault();
-  // console.log(this.refs)
+  console.log(this.refs)
   let data={
     beef:this.refs.beef.checked,
     corn:this.refs.corn.checked,
@@ -48,7 +48,8 @@ sendHandler:function(e){
     vegetables:this.refs.vegetables.checked,
     vegetarian:this.refs.vegetarian.checked,
     date:this.refs.date.value,
-    restaurant: this.props.restaurant.Name
+    restaurant: this.props.restaurant.Name,
+    textarea: this.refs.textarea.value
   }
   store.messages.create(data,{
     success: function(){
@@ -63,8 +64,8 @@ sendHandler:function(e){
 console.log(this.props)
         return (
       <div className="messageModal">
-      	<h1>Dietary Restriction Form </h1>
-        <h3> For {this.props.restaurant.Name}</h3>
+      	<h1>Dietary Restriction Form For {this.props.restaurant.Name}</h1>
+
 
         <form
         onSubmit={this.sendHandler}
@@ -113,9 +114,14 @@ console.log(this.props)
           <input type="checkbox" name="restriction" ref="vegetables" value="vegetables" id="vegetables"/>
 
           <br></br>
-          <textarea className ="textarea" placeholder="Please enter specific allergy/dietary restrictions here."/>
+          <input className ="textarea"
+          placeholder="Please enter specific allergy/dietary restrictions here."
+          type="text"
+          id="textarea"
+          ref="textarea"
+          />
 
-          <h4> Select the date of your reservation:</h4>
+          <h4> Select the date of your reservation:  </h4>
           <input id="date"
           type="date"
           ref="date"
@@ -126,6 +132,7 @@ console.log(this.props)
           name="submit"
           value="SEND TO CHEF"
           />
+          <span id="line"> | </span>
       		<button
           className="backButton"
           onClick={this.props.closeModal}

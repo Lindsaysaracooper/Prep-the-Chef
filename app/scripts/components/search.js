@@ -10,19 +10,27 @@ export default React.createClass({
 
   getInitialState:function(){
     return{
-      restaurants:[]
+      restaurants:[],
+      session: {}
     };
 
   },
   updateState:function(){
-    this.setState({restaurants:store.restaurants.toJSON()});
+    this.setState({
+      restaurants:store.restaurants.toJSON(),
+      session:store.session.toJSON()
+    });
+
   },
   componentDidMount:function(){
       store.restaurants.fetch();
     store.restaurants.on('update change', this.updateState);
+    store.session.on('change', this.updateState)
   },
   componentWillUnmount:function(){
     store.restaurants.off('update change', this.updateState)
+    store.session.off('change', this.updateState)
+
   },
 
   render: function (){

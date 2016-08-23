@@ -8,7 +8,6 @@ export default React.createClass({
   getInitialState: function(){
     return {
       messageModal: false,
-      like:false
 
     }
   },
@@ -19,11 +18,7 @@ export default React.createClass({
  },
 
  like:function(){
-   this.setState({
-     like:true
-   })
-
-   store.session.addFavorite(this.props.restaurant._id);
+   store.session.toggleFavorite(this.props.restaurant._id);
 
    console.log('LIKED')
  },
@@ -35,9 +30,8 @@ export default React.createClass({
  },
 
 render:function (){
-  let favorited;
-  if (this.state.like) {favorited= 'heart'}
-  console.log(this.props.restaurant.Name)
+  let liked = '';
+  if (this.props.liked) {liked= 'heart'}
   let messageShow;
   if (this.state.messageModal) {
     messageShow = <MessageModal
@@ -50,11 +44,9 @@ render:function (){
       {this.props.restaurant.Name} <br></br>
     <span className="rating">  Rating: {this.props.restaurant.Rating} Stars</span>
       <img src={this.props.restaurant.Image}/>
-      <i className="fa fa-heart heart"
-      id={favorited}
+      <i className={"fa fa-heart " + liked}
       aria-hidden="true"
       onClick={this.like}></i>
-      {liked}
       <button
       className ="messageButton"
       onClick= {this.messageClickHandler}>

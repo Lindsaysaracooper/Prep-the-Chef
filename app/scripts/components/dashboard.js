@@ -4,6 +4,7 @@ import store from '../store';
 import Restaurants from '../collection/Restaurants'
 import ReactFilepicker from 'react-filepicker';
 import settings from '../settings';
+import _ from 'underscore';
 
 export default React.createClass({
 getInitialState:function(){
@@ -59,34 +60,41 @@ componentWillUnmount:function(){
     store.restaurants.off('update change', this.updateState);
 },
 
-removeButton: function(){
-session.favorites.removeButton(this.props);
-
+removeButton: function(e){
+store.session.toggleFavorite(e.target.id)
 },
 
-photoShow:function(files){
-console.log(files)
-},
 
 
   render:function (e){
 
     let messages = this.state.messages.map((message,i,arr)=>{
-    // console.log(message)
-    // console.log(message.restaurant, message.date);
+      let allergies = _.keys(message);
+      let allergyList = allergies.filter((allergyItem,i,arr)=>{
+        return message[allergyItem] === true;
+
+        }).map((allergyItem,i,arr)=>{
+
+        return(
+          <p className="allergy">{allergyItem} </p>
+        )
+      })
+
+      console.log(_.keys(message))
         return (
-          <li key={i}> You sent a message to {message.restaurant} for the reservation on {message.date}
-          <input type="button" name="delete" value="DELETE"/>
+          <li key={i}>
+          <img src={store.restaurants.findWhere({Name:message.restaurant}).get('Image')}/>
+          <p className="reservation"> Reservation date: {message.date}</p>
+          <p className="to">To: {message.restaurant} </p>
+          <p className="message"> "{message.textarea}"</p>
+          <p className="diet">Dietary Restrictions: {allergyList}</p>
+
+
           </li>
         )
       })
-      const options = {
-  buttonText: 'Pick Me',
-  buttonClass: 'filepicker',
-  mimetype: 'image/*',
-  container: 'window',
-  services: ['COMPUTER', 'FACEBOOK', 'CLOUDAPP']
-};
+
+
 
 let places=[];
 let favorites = this.state.favorites.filter((favoriteId,i,arr)=>{
@@ -98,16 +106,17 @@ if (places.indexOf(favoriteId)=== -1){
   return false;
 }
 }).map((favoriteId,i,arr)=>{
-  console.log('looking for resatuant');
   if(store.restaurants.get(favoriteId)){
-    console.log('found the restaurant');
   let favoriteSpot = store.restaurants.get(favoriteId).toJSON();
-// console.log(favoriteSpot.toJSON())
+console.log(favoriteSpot.Image)
+// console.log(store.restaurants.get(favoriteId)
 
 // console.log(message.restaurant, message.date);
     return (
-      <li key={i}><i className="fa fa-heart" aria-hidden="true"></i>  {favoriteSpot.Name}
+      <li key={i}><i className="fa fa-heart likey" aria-hidden="true"></i>  {favoriteSpot.Name}
       <input
+      id={favoriteId}
+      className="removeButton"
       type="button"
       name="delete"
       value="Remove"
@@ -120,19 +129,12 @@ if (places.indexOf(favoriteId)=== -1){
 
       return(
         <div className="dashboard">
+        <div className="dashHeader">
+        <h1>Your Dashboard</h1>
+        <p> Messages, favorites, dietary restrictions conveniently located in one place.</p>
+        </div>
         	<div className="userDashboard">
-        		<h2>Your Account</h2>
-            <img src= "assets/photos/pic.jpg"/>
-
-            <input type="filepicker-dragdrop"
-            data-fp-apikey="AhTgLagciQByzXpFGRI0Az"
-            data-fp-mimetypes="image/*"
-            data-fp-container="modal"
-            data-fp-store-location="gcs" onChange={this.photoShow}/>
-
-        		<p>
-        		</p>
-            <h2> Your Favorites </h2>
+            <h2> YOUR FAVORITES</h2>
               {favorites}
         	</div>
         	<div className="messageCenter">
@@ -149,10 +151,3 @@ if (places.indexOf(favoriteId)=== -1){
   }
 
 });
-
-
-// <ReactFilepicker
-// apikey={settings.api}
-// onClick={console.log('WHY WONT YOU WORK')}
-// onSuccess={this.photoShow}
-// options={options}/>

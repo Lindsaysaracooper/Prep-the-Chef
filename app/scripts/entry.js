@@ -18,7 +18,7 @@ $(document).ajaxSend(function(evt,xhr,jquerysettings){
   // xhr.setRequestHeader('Authorization', `Basic ${settings.basicAuth}`)
 
 if (store.session.get('authtoken')){
-  xhr.setRequestHeader('Authorization', `Kinvey ${store.session.get('authtoken')}`)
+  xhr.setRequestHeader('Authorization', `Kinvey ${localStorage.authtoken}`)
 
 } else {
     xhr.setRequestHeader('Authorization', `Basic ${settings.basicAuth}`)

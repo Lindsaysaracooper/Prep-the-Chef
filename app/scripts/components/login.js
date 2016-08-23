@@ -79,7 +79,8 @@ store.session.signup(data);
           type="button"
           name="send"
           value="SEND"
-          onClick= {(this.signUpSubmitHandler)}/>
+          onClick= {(this.signUpSubmitHandler)}
+          />
           <p></p>
           <Link id ="loginBack" to = "/home"> BACK </Link>
 
