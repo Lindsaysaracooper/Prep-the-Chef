@@ -26,12 +26,12 @@ h2{
 }
 }
 .aboutCopy{
-  border: 2px solid black;
+  border: 2px solid $main-color;
     padding-top: 30px;
     width: 70%;
 margin-left: 15%;
 margin-top: 30px;
-background: white;
+background: $background-color;
 h3{
 font-family: $header-font;
 margin: 0;

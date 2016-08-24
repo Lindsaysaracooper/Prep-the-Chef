@@ -30,7 +30,7 @@ width: 20%;
 li{
   list-style: none;
   font-size: 1rem;
-  background: white;
+  background: $background-color;
   margin: 10px;
   padding: 8px;
   width: 100%;
@@ -67,6 +67,7 @@ h2{
     margin-left: -8px;
     float: left;
     height: 100%;
+
   }
 }
 
@@ -74,10 +75,13 @@ h2{
 font-family: $main-font;
 
 li{
-  background: white;
+  background: $background-color;
   list-style: none;
   padding-left: 10px;
   height:150px;
+  padding: 20px;
+border: 2px solid $main-color;
+margin-bottom: 20px;
 }
 .to{
 font-size: 1.4rem;

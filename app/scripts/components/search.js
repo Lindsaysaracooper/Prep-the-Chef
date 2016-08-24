@@ -36,6 +36,7 @@ export default React.createClass({
   render: function (){
 
     let restaurants = this.state.restaurants.filter((restaurant,i,arr)=>{
+      // console.log("restaurant.Cuisine ", restaurant)
         return restaurant.Cuisine.indexOf(this.props.location.query.term) !== -1;
       }).map((restaurant,i,arr)=>{
     let favArray= store.session.get('favorites').indexOf(restaurant._id)
@@ -54,7 +55,10 @@ let cuisine = this.props.location.query.term;
     return(
       <div className="wholeSearch">
       <div className="searchResults">
+      <section>
       <h1>{cuisine} Restaurants In Your Area</h1>
+      <h2> Message the restaurant with your upcoming reservation </h2>
+      </section>
       <ul className= "results">
        {restaurants}
        </ul>

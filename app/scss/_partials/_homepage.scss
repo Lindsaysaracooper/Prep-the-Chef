@@ -17,14 +17,14 @@ h1{
   margin-top: 0;
   text-align: center;
   font-size: 5.5rem;
-  color: white;
+  color: $background-color;
   font-family: $header-font;
 
   }
 h2{
   text-align: center;
   width: 100%;
-  color:white;
+  color:$background-color;
   font-family: $main-font;
   text-transform: uppercase;
   font-size: 1.7rem;
@@ -32,7 +32,7 @@ h2{
   }
 h3{
   text-align: center;
-  color: white;
+  color: $background-color;
   font-size: 1.4rem;
   width: 100%;
   font-family: $main-font;
@@ -49,11 +49,11 @@ h3{
 
 .howItWorks{
   width: 100%;
-color:$gray;
+color:$main-color;
 
 }
-.howItWorks h1{
-color:$orange;
+#works{
+color:$highlight-color;
 font-size: 4rem;
 text-align: center;
 font-family: $header-font;
@@ -78,7 +78,7 @@ p{
   font-size: 8rem;
   height: 21vh;
   margin-left: 35%;
-  color:$orange;
+  color:$highlight-color;
 
 }
 #right{
@@ -88,9 +88,9 @@ p{
 }
 
 .examples{
-
+margin-left: 2%;
 h1{
-  color:$orange;
+  color:$highlight-color;
   font-size: 4rem;
   text-align: center;
   font-family: $header-font;
@@ -101,7 +101,7 @@ h1{
   display: inline-block;
   width: 25%;
     font-family: $main-font;
-    color:$gray;
+    color:$main-color;
     text-transform: uppercase;
 
 img{
@@ -142,6 +142,7 @@ header{
         height: 300px;
   h1{
     font-size: 4rem;
+        padding-top: 20px;
   }
   h2{
     font-size: 1.4rem;
@@ -182,7 +183,7 @@ header{
       width: 100%;
       text-align: center;
       font-size: 3.4rem;
-      color: white;
+      color: $background-color;
       font-family: "Great Vibes", cursive;
       padding-top: 77px;
 
@@ -190,7 +191,7 @@ header{
     h2{
       text-align: center;
       width: 100%;
-      color:white;
+      color:$background-color;
       font-family: $main-font;
       text-transform: uppercase;
       font-size: 1.9rem;
@@ -198,7 +199,7 @@ header{
       }
     h3{
       text-align: center;
-      color: white;
+      color: $background-color;
       font-size: 1.2rem;
       width: 100%;
       font-family: $main-font;
@@ -206,9 +207,9 @@ header{
     }
 
   }
-.howItWorks h1{
-border-top: 0;
-color: #EC7244;
+#works{
+  color:$highlight-color;
+  border-top: 0;
     font-size: 4rem;
     text-align: center;
     font-family: "Great Vibes", cursive;
@@ -245,14 +246,15 @@ color: #EC7244;
 
 
 
-.examples{
+section .examples{
+margin-left: 2%;
 
 h1{
-  color:$orange;
+  color:$highlight-color;
   font-size: 4rem;
   text-align: center;
   font-family: $header-font;
-  border: 2px solid white;
+  border: 2px solid $background-color;
   padding-top: 5vh;
   }
 }

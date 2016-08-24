@@ -21,7 +21,7 @@ render:function(){
 		</header>
 
 <article className="howItWorks">
-	<h1>How It Works</h1>
+	<h1 id="works">How It Works</h1>
 	<div className="howBox">
 		<i className="fa fa-search" id="icon" aria-hidden="true"></i>
 		<p>
@@ -43,7 +43,7 @@ render:function(){
 		</p>
 	</div>
 </article>
-<section className= 'examples'>
+<div className= 'examples'>
   <h1> Some of our partners </h1>
   <a target="_blank" href ="https://www.yelp.com/biz/eddie-vs-prime-seafood-austin-6">
 	<div className="exampleRestaurant">
@@ -75,7 +75,7 @@ render:function(){
     </div>
     </a>
 
-</section>
+</div>
 {this.props.children}
 </main>
   )

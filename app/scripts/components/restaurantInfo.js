@@ -30,8 +30,11 @@ export default React.createClass({
  },
 
 render:function (){
-  let liked = '';
-  if (this.props.liked) {liked= 'heart'}
+  // console.log(this.props.restaurant['Yelp Page'] )
+  let liked = <i className="fa fa-heart-o heart" aria-hidden="true" onClick={this.like}></i>;
+  if (this.props.liked) {liked= (<i className={"fa fa-heart heart"}
+    aria-hidden="true"
+    onClick={this.like}></i>)}
   let messageShow;
   if (this.state.messageModal) {
     messageShow = <MessageModal
@@ -44,9 +47,8 @@ render:function (){
       {this.props.restaurant.Name} <br></br>
     <span className="rating">  Rating: {this.props.restaurant.Rating} Stars</span>
       <img src={this.props.restaurant.Image}/>
-      <i className={"fa fa-heart " + liked}
-      aria-hidden="true"
-      onClick={this.like}></i>
+      {liked}
+       <a  target="_blank" href = {this.props.restaurant['Yelp Page']}><i className="fa fa-yelp yelpSpecific" aria-hidden="true"></i> </a>
       <button
       className ="messageButton"
       onClick= {this.messageClickHandler}>

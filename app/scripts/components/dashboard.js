@@ -80,7 +80,7 @@ store.session.toggleFavorite(e.target.id)
         )
       })
 
-      console.log(_.keys(message))
+      // console.log(_.keys(message))
         return (
           <li key={i}>
           <img src={store.restaurants.findWhere({Name:message.restaurant}).get('Image')}/>
@@ -108,7 +108,7 @@ if (places.indexOf(favoriteId)=== -1){
 }).map((favoriteId,i,arr)=>{
   if(store.restaurants.get(favoriteId)){
   let favoriteSpot = store.restaurants.get(favoriteId).toJSON();
-console.log(favoriteSpot.Image)
+// console.log(favoriteSpot.Image)
 // console.log(store.restaurants.get(favoriteId)
 
 // console.log(message.restaurant, message.date);

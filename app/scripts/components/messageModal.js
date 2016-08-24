@@ -63,6 +63,7 @@ sendHandler:function(e){
   render: function (){
 console.log(this.props)
         return (
+          <div className='modalContainer'>
       <div className="messageModal">
       	<h1>Dietary Restriction Form For {this.props.restaurant.Name}</h1>
 
@@ -139,6 +140,7 @@ console.log(this.props)
           >
           BACK</button>
           </form>
+      </div>
       </div>
     )
 }

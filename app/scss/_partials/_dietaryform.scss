@@ -1,16 +1,25 @@
+.modalContainer{
+position: fixed;
+top: 0;
+bottom: 0;
+left:0;
+right:0;
+background-color: rgba($main-color,.6);
+}
 .messageModal{
-  position: fixed;
-  background: white;
-  padding: 6vh 0px;
-  font-family: "Abel", sans-serif;
-  border: black solid 2px;
-  top: 5vh;
-  bottom: 5vh;
-  width: 60%;
-  margin-left: -10%;
+  position: absolute;
+      background: $background-color;
+      padding: 6vh 0px;
+      font-family: "Abel", sans-serif;
+      border: $main-color solid 2px;
+      top: 5vh;
+      bottom: 5vh;
+      width: 60%;
+      left: 20%;
 h1{
   font-size: 2rem;
-  margin-top: -25px;
+  margin:0;
+  padding-top:0;
 }
   h4{
     display: inline-block;
@@ -31,14 +40,14 @@ text-align: center;
   width: 80%;
 margin-top: 10px;
 height:45px;
-border: 2px solid black;
+border: 2px solid $main-color;
 }
 
 .messageButton{
   border: none;
 background: #EBEBEB;
 font-size: 1.2rem;
-color:$orange;
+color:$highlight-color;
 float:right;
 &:hover{
   border:none;
@@ -49,7 +58,7 @@ float:right;
 .backButton, .sendButton{
   font-family: $main-font;
 border: none;
-background-color: white;
+background-color: $background-color;
 font-size: 2rem;
 margin: 0 2px;
 &:hover{

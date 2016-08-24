@@ -16,16 +16,16 @@
 //     text-decoration: none;
 //     font-size: 1.5rem;
 //     margin-left: 5%;
-//     color: white;
+//     color: $background-color;
 //     float: right;
 //     font-family: 'Alegreya Sans SC', sans-serif;
 //     text-transform: uppercase;
-//     color: black;
-//     background: white;
+//     color: $main-color;
+//     background: $background-color;
 //     opacity: 0.8;
 //     z-index: 100;
 // &:hover{
-//   color:$orange;
+//   color:$highlight-color;
 //   border:none;
 //   transform: scale(1.1);
 //   }
@@ -36,14 +36,14 @@
 //
 // #aboutButton, #logoutButton{
 //   margin-right:3%;
-//   color: black;
-// background: white;
+//   color: $main-color;
+// background: $background-color;
 // opacity: 0.8;
 // }
 // //
 // .loginNote{
 // text-align: center;
-// color: white;
+// color: $background-color;
 // font-size: 1.4rem;
 // }
 //
@@ -53,7 +53,7 @@
 .navButton{
   display: block;
   text-decoration: none;
-  color: white;
+  color: $background-color;
   text-transform: uppercase;
   font-family: $main-font;
   font-size: 2rem;
@@ -78,7 +78,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: $orange;
+  background: $highlight-color;
 }
 
 /* Position and sizing of clickable cross button */
@@ -94,7 +94,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: $orange;
+  background: $highlight-color;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }

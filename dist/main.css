@@ -1,14 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Abel|Great+Vibes";
-body {
-  margin: 0; }
-
-.container {
-  background: #EBEBEB; }
-
 .navButton {
   display: block;
   text-decoration: none;
-  color: white;
+  color: #F9F9F7;
   text-transform: uppercase;
   font-family: "Abel", sans-serif;
   font-size: 2rem;
@@ -77,19 +71,19 @@ header {
     margin-top: 0;
     text-align: center;
     font-size: 5.5rem;
-    color: white;
+    color: #F9F9F7;
     font-family: "Great Vibes", cursive; }
   header h2 {
     text-align: center;
     width: 100%;
-    color: white;
+    color: #F9F9F7;
     font-family: "Abel", sans-serif;
     text-transform: uppercase;
     font-size: 1.7rem;
     margin-top: 0; }
   header h3 {
     text-align: center;
-    color: white;
+    color: #F9F9F7;
     font-size: 1.4rem;
     width: 100%;
     font-family: "Abel", sans-serif;
@@ -102,9 +96,9 @@ header {
 
 .howItWorks {
   width: 100%;
-  color: #2E2C2A; }
+  color: #373737; }
 
-.howItWorks h1 {
+#works {
   color: #EC7244;
   font-size: 4rem;
   text-align: center;
@@ -134,18 +128,20 @@ header {
   position: relative;
   bottom: 100px; }
 
-.examples h1 {
-  color: #EC7244;
-  font-size: 4rem;
-  text-align: center;
-  font-family: "Great Vibes", cursive;
-  padding-top: 5vh; }
+.examples {
+  margin-left: 2%; }
+  .examples h1 {
+    color: #EC7244;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    padding-top: 5vh; }
 
 .exampleRestaurant {
   display: inline-block;
   width: 25%;
   font-family: "Abel", sans-serif;
-  color: #2E2C2A;
+  color: #373737;
   text-transform: uppercase; }
   .exampleRestaurant img {
     width: 95%;
@@ -177,7 +173,8 @@ header {
     position: inherit;
     height: 300px; }
     header h1 {
-      font-size: 4rem; }
+      font-size: 4rem;
+      padding-top: 20px; }
     header h2 {
       font-size: 1.4rem; }
     header h3 {
@@ -206,28 +203,28 @@ header {
       width: 100%;
       text-align: center;
       font-size: 3.4rem;
-      color: white;
+      color: #F9F9F7;
       font-family: "Great Vibes", cursive;
       padding-top: 77px; }
     header h2 {
       text-align: center;
       width: 100%;
-      color: white;
+      color: #F9F9F7;
       font-family: "Abel", sans-serif;
       text-transform: uppercase;
       font-size: 1.9rem;
       margin-top: 0; }
     header h3 {
       text-align: center;
-      color: white;
+      color: #F9F9F7;
       font-size: 1.2rem;
       width: 100%;
       font-family: "Abel", sans-serif;
       text-transform: uppercase; }
 
-  .howItWorks h1 {
-    border-top: 0;
+  #works {
     color: #EC7244;
+    border-top: 0;
     font-size: 4rem;
     text-align: center;
     font-family: "Great Vibes", cursive;
@@ -256,13 +253,15 @@ header {
   .exampleRestaurant {
     width: 100%; }
 
-  .examples h1 {
-    color: #EC7244;
-    font-size: 4rem;
-    text-align: center;
-    font-family: "Great Vibes", cursive;
-    border: 2px solid white;
-    padding-top: 5vh; } }
+  section .examples {
+    margin-left: 2%; }
+    section .examples h1 {
+      color: #EC7244;
+      font-size: 4rem;
+      text-align: center;
+      font-family: "Great Vibes", cursive;
+      border: 2px solid #F9F9F7;
+      padding-top: 5vh; } }
 footer p {
   padding: 10vh;
   background-color: #EC7244;
@@ -279,7 +278,7 @@ footer p {
   bottom: 36vh;
   width: 60%;
   text-align: center;
-  background: white;
+  background: #F9F9F7;
   margin-left: 20%;
   padding: 6vh 0px;
   opacity: 0.9;
@@ -304,12 +303,12 @@ footer p {
     margin-left: 15%; }
 
 .aboutCopy {
-  border: 2px solid black;
+  border: 2px solid #373737;
   padding-top: 30px;
   width: 70%;
   margin-left: 15%;
   margin-top: 30px;
-  background: white; }
+  background: #F9F9F7; }
   .aboutCopy h3 {
     font-family: "Great Vibes", cursive;
     margin: 0;
@@ -688,63 +687,104 @@ footer p {
 @-webkit-keyframes Select-animation-spin {
   to {
     -webkit-transform: rotate(1turn); } }
+section {
+  height: 65vh;
+  background-image: url("assets/photos/foodwallpaper.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%; }
+  section h2 {
+    text-align: center;
+    margin-top: 0;
+    font-family: "Abel", sans-serif;
+    font-size: 1.6rem; }
+
 .searchResults h1 {
   font-size: 4rem;
   font-family: "Great Vibes", cursive;
   text-align: center;
   margin-top: 0;
-  padding-top: 30px; }
+  padding-top: 100px; }
 
-.messageButton {
-  background: #EBEBEB; }
+li .messageButton {
+  background: #F9F9F7; }
 
 .results li {
-  margin-left: 26%;
-  width: 40%;
+  display: inline-block;
+  margin-left: 5%;
+  width: 35%;
   list-style: none;
   font-size: 2rem;
   text-align: center;
   font-family: "Abel", sans-serif;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  background: #F9F9F7;
+  padding: 10px 45px; }
   .results li img {
-    width: 100%; }
+    width: 100%;
+    height: 400px;
+    object-fit: cover; }
   .results li .rating {
     font-size: 1.3rem; }
   .results li a {
     text-decoration: none;
-    color: #EC7244; }
-
-.fa-heart {
-  float: left; }
+    color: #EC7244;
+    background-color: #F9F9F7; }
 
 .heart {
+  float: left;
   color: #EC7244; }
 
+.yelpSpecific {
+  float: left; }
+
+@media screen and (max-width: 768px) {
+  .results li {
+    margin-left: 15%;
+    width: 60%; } }
+@media screen and (max-width: 955px) {
+  .results li {
+    margin-left: 15%;
+    width: 60%; } }
 @media screen and (max-width: 450px) {
+  section {
+    height: 650px; }
+
+  .searchResults h1 {
+    margin-top: 20%; }
+
   .results li {
     list-style: none;
-    font-size: 2.5rem;
     text-align: center;
     font-family: "Abel", sans-serif;
-    margin-bottom: 50px;
-    width: 100%;
-    margin-left: 0; }
+    width: 80%;
+    height: 550px;
+    margin-left: -6%; }
 
   .messageButton {
     font-size: 1.8rem; } }
-.messageModal {
+.modalContainer {
   position: fixed;
-  background: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(55, 55, 55, 0.6); }
+
+.messageModal {
+  position: absolute;
+  background: #F9F9F7;
   padding: 6vh 0px;
   font-family: "Abel", sans-serif;
-  border: black solid 2px;
+  border: #373737 solid 2px;
   top: 5vh;
   bottom: 5vh;
   width: 60%;
-  margin-left: -10%; }
+  left: 20%; }
   .messageModal h1 {
     font-size: 2rem;
-    margin-top: -25px; }
+    margin: 0;
+    padding-top: 0; }
   .messageModal h4 {
     display: inline-block;
     margin-top: 0; }
@@ -760,7 +800,7 @@ footer p {
   width: 80%;
   margin-top: 10px;
   height: 45px;
-  border: 2px solid black; }
+  border: 2px solid #373737; }
 
 .messageButton {
   border: none;
@@ -775,7 +815,7 @@ footer p {
 .backButton, .sendButton {
   font-family: "Abel", sans-serif;
   border: none;
-  background-color: white;
+  background-color: #F9F9F7;
   font-size: 2rem;
   margin: 0 2px; }
   .backButton:hover, .sendButton:hover {
@@ -810,7 +850,7 @@ footer p {
   .userDashboard li {
     list-style: none;
     font-size: 1rem;
-    background: white;
+    background: #F9F9F7;
     margin: 10px;
     padding: 8px;
     width: 100%; }
@@ -842,10 +882,13 @@ footer p {
 .eachMessage {
   font-family: "Abel", sans-serif; }
   .eachMessage li {
-    background: white;
+    background: #F9F9F7;
     list-style: none;
     padding-left: 10px;
-    height: 150px; }
+    height: 150px;
+    padding: 20px;
+    border: 2px solid #373737;
+    margin-bottom: 20px; }
   .eachMessage .to {
     font-size: 1.4rem;
     font-weight: bolder;
@@ -865,7 +908,7 @@ footer p {
 
 .sent {
   text-align: center;
-  background: white;
+  background: #F9F9F7;
   font-family: "Abel", sans-serif; }
   .sent p {
     font-size: 1.4rem;
@@ -875,5 +918,12 @@ footer p {
     color: #EC7244; }
     .sent a a:hover {
       transform: scale(1.1); }
+
+body {
+  margin: 0;
+  color: #373737; }
+
+.container {
+  background: #EBEBEB; }
 
 /*# sourceMappingURL=main.css.map */

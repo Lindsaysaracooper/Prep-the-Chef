@@ -1,10 +1,4 @@
-body{
-  margin:0;
-}
 
-.container{
-  background: #EBEBEB;
-}
 @import './_partials/variables';
 
 
@@ -19,3 +13,13 @@ body{
 @import './_partials/dietaryform';
 @import './_partials/dashboard';
 @import './_partials/sent';
+
+
+body{
+  margin:0;
+  color:$main-color;
+}
+
+.container{
+  background: #EBEBEB;
+}
