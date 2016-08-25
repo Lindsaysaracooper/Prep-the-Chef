@@ -1,11 +1,33 @@
-.loginWhole{
+.loginContainer{
   position: fixed;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  background-color: rgba($main-color,.6);
+}
+
+.loginWhole{
+  position: absolute;
       bottom: 36vh;
       width: 60%;
       text-align: center;
       background: $background-color;
       margin-left: 20%;
       padding: 6vh 0px;
-      opacity: 0.9;
       font-family: $main-font;
+}
+.loginBack {
+  display: block;
+  text-decoration: none;
+  color:$main-color;
+  &:hover{
+    transform: scale(1.1);
+    }
+}
+.loginSignup {
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    background-color:$background-color;
+  }
+
 }

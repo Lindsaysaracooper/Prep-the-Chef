@@ -69,3 +69,28 @@ margin: 0 2px;
 #line{
   font-size: 2rem;
 }
+
+@media screen and (max-width: 733px) {
+font-size: 1rem;
+}
+
+
+@media screen and (max-width: 450px) {
+.messageModal{
+  width: 80%;
+left: 10%;
+h1{
+      font-size: 1.3rem;
+}
+h3{
+  font-size: 1rem;
+}
+form{
+font-size: 0.8rem;
+}
+.backButton, .sendButton {
+  font-size: 1rem;
+}
+}
+
+}

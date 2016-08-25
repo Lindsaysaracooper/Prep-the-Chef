@@ -55,10 +55,12 @@
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3); }
 
+@media screen and (max-width: 450px) {
+  .bm-item-list {
+    display: block; } }
 video {
   width: 100%;
-  overflow: hidden;
-  margin-top: -161px; }
+  overflow: hidden; }
 
 header {
   position: absolute;
@@ -113,9 +115,11 @@ header {
   text-transform: uppercase; }
   .howBox p {
     margin-left: 5%;
+    text-align: center;
     display: block;
     font-family: "Abel", sans-serif;
-    margin-top: 30px; }
+    margin-top: 30px;
+    font-weight: bolder; }
 
 #icon {
   font-size: 8rem;
@@ -158,7 +162,7 @@ header {
 .loginNote {
   width: 20%;
   background: #EC7244;
-  opacity: .7;
+  opacity: .8;
   margin-left: 40%;
   font-size: 2rem;
   bottom: 44vh; }
@@ -181,10 +185,18 @@ header {
       font-size: 1rem; }
 
   .exampleRestaurant {
-    width: 50%; } }
+    width: 50%; }
+
+  .loginNote {
+    width: 100%;
+    margin: 0; } }
 @media screen and (max-width: 930px) {
   header {
-    bottom: 41vh; } }
+    bottom: 41vh; }
+
+  .loginNote {
+    width: 100%;
+    margin: 0; } }
 @media screen and (max-width: 450px) {
   video {
     display: none; }
@@ -261,7 +273,11 @@ header {
       text-align: center;
       font-family: "Great Vibes", cursive;
       border: 2px solid #F9F9F7;
-      padding-top: 5vh; } }
+      padding-top: 5vh; }
+
+  .loginNote {
+    width: 100%;
+    margin: 0; } }
 footer p {
   padding: 10vh;
   background-color: #EC7244;
@@ -273,16 +289,33 @@ footer p {
   font-size: 2rem;
   padding: 5px; }
 
-.loginWhole {
+.loginContainer {
   position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(55, 55, 55, 0.6); }
+
+.loginWhole {
+  position: absolute;
   bottom: 36vh;
   width: 60%;
   text-align: center;
   background: #F9F9F7;
   margin-left: 20%;
   padding: 6vh 0px;
-  opacity: 0.9;
   font-family: "Abel", sans-serif; }
+
+.loginBack {
+  display: block;
+  text-decoration: none;
+  color: #373737; }
+  .loginBack:hover {
+    transform: scale(1.1); }
+
+.loginSignup input:-webkit-autofill, .loginSignup textarea:-webkit-autofill, .loginSignup select:-webkit-autofill {
+  background-color: #F9F9F7; }
 
 .aboutHeader {
   background-image: url("assets/photos/foodwallpaper.jpg");
@@ -705,6 +738,9 @@ section {
   text-align: center;
   margin-top: 0;
   padding-top: 100px; }
+.searchResults h2 {
+  width: 60%;
+  margin-left: 20%; }
 
 li .messageButton {
   background: #F9F9F7; }
@@ -719,7 +755,8 @@ li .messageButton {
   font-family: "Abel", sans-serif;
   margin-bottom: 50px;
   background: #F9F9F7;
-  padding: 10px 45px; }
+  padding: 10px 45px;
+  font-weight: bolder; }
   .results li img {
     width: 100%;
     height: 400px;
@@ -733,6 +770,7 @@ li .messageButton {
 
 .heart {
   float: left;
+  margin-right: 1%;
   color: #EC7244; }
 
 .yelpSpecific {
@@ -743,6 +781,9 @@ li .messageButton {
     margin-left: 15%;
     width: 60%; } }
 @media screen and (max-width: 955px) {
+  section {
+    height: 74vh; }
+
   .results li {
     margin-left: 15%;
     width: 60%; } }
@@ -824,6 +865,20 @@ li .messageButton {
 #line {
   font-size: 2rem; }
 
+@media screen and (max-width: 733px) {
+  font-size: 1rem; }
+@media screen and (max-width: 450px) {
+  .messageModal {
+    width: 80%;
+    left: 10%; }
+    .messageModal h1 {
+      font-size: 1.3rem; }
+    .messageModal h3 {
+      font-size: 1rem; }
+    .messageModal form {
+      font-size: 0.8rem; }
+    .messageModal .backButton, .messageModal .sendButton {
+      font-size: 1rem; } }
 .dashHeader h1 {
   font-family: "Great Vibes", cursive;
   font-size: 5rem;
@@ -906,10 +961,33 @@ li .messageButton {
   margin-right: 5px;
   color: #EC7244; }
 
+@media screen and (max-width: 733px) {
+  .userDashboard {
+    position: initial;
+    width: 75%; }
+
+  .eachMessage {
+    position: inherit;
+    width: 155%;
+    padding: 18px; }
+    .eachMessage li {
+      width: auto;
+      height: auto; }
+    .eachMessage img {
+      width: 100%; }
+    .eachMessage .to {
+      margin-top: 0; }
+
+  footer {
+    margin-top: 65px; } }
 .sent {
+  height: 100vh;
   text-align: center;
   background: #F9F9F7;
   font-family: "Abel", sans-serif; }
+  .sent h1 {
+    padding-top: 50px;
+    margin-top: 0; }
   .sent p {
     font-size: 1.4rem;
     margin: 0; }

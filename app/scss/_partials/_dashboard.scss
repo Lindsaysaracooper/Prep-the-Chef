@@ -106,3 +106,33 @@ display: inline;
   margin-right: 5px;
   color:#EC7244;
 }
+
+@media screen and (max-width: 733px) {
+.userDashboard{
+  position: initial;
+width: 75%;
+}
+
+.eachMessage{
+  position: inherit;
+    width: 155%;
+    padding: 18px;
+    li{
+      width: auto;
+height: auto;
+    }
+    img{
+      width: 100%;
+    }
+    .to{
+      margin-top: 0;
+    }
+}
+footer{
+      margin-top: 65px;
+}
+}
+
+
+@media screen and (max-width: 450px) {
+}

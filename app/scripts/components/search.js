@@ -57,7 +57,7 @@ let cuisine = this.props.location.query.term;
       <div className="searchResults">
       <section>
       <h1>{cuisine} Restaurants In Your Area</h1>
-      <h2> Message the restaurant with your upcoming reservation </h2>
+      <h2> Upcoming Reservation? Select the restaurant and message the chef your dietary needs</h2>
       </section>
       <ul className= "results">
        {restaurants}

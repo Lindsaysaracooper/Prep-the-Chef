@@ -32,7 +32,7 @@ render:function(){
 	<div className="howBox">
 		<i className="fa fa-comment-o" id="icon" aria-hidden="true"></i>
 		<p>
-			Message the chef directly with your dietary restrictions, date and time of arrival.
+			Message the chef directly.
 		</p>
 	</div>
 		<i className="fa fa-arrow-right" id="right" aria-hidden="true"></i>

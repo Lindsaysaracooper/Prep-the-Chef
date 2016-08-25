@@ -2,7 +2,6 @@
 video{
   width: 100%;
       overflow: hidden;
-      margin-top: -161px;
   }
 
 header {
@@ -69,9 +68,11 @@ padding-bottom: 5vh;
 text-transform: uppercase;
 p{
   margin-left: 5%;
+  text-align: center;
   display: block;
   font-family: $main-font;
   margin-top: 30px;
+  font-weight: bolder;
 }
 }
 #icon{
@@ -123,7 +124,7 @@ img{
 .loginNote{
   width: 20%;
 background: #EC7244;
-opacity: .7;
+opacity: .8;
 margin-left: 40%;
 font-size: 2rem;
 bottom: 44vh;
@@ -156,14 +157,23 @@ header{
 
   }
 
-}
 
+.loginNote{
+  width: 100%;
+  margin: 0;
+}
+}
 
 @media screen and (max-width: 930px) {
   header{
     bottom: 41vh;
   }
+  .loginNote{
+    width: 100%;
+    margin: 0;
+  }
 }
+
 
 @media screen and (max-width: 450px) {
   video{
@@ -257,5 +267,9 @@ h1{
   border: 2px solid $background-color;
   padding-top: 5vh;
   }
+}
+.loginNote{
+  width: 100%;
+  margin: 0;
 }
 }

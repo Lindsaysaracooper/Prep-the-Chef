@@ -50,25 +50,26 @@ store.session.signup(data);
   render: function(){
 
     return(
+      <div className="loginContainer">
       <div className="loginWhole">
-      	<div className="loginSignup">
+      	<div className="loginSignup" onSubmit={this.submitHandler}  role= "form">
       		<h1>LOG IN</h1>
       		<span className="loginWords">USERNAME</span>
       		<input className="inputField" type="text" placeholder="type here" ref="username"/>
       			<span className="loginWords">PASSWORD</span>
       		<input className="inputField" type="password" placeholder="type here" ref="password"/>
       		<input className="inputField"
-          type="button"
+          type="submit"
           name="send"
           value="SEND"
-          onClick={(this.submitHandler)}/>
-
+          onClick={this.submitHandler}/>
         </div>
+
 
       	<p>
       		Haven't signed up yet? Fill out below:
       	</p>
-      	<div className="loginSignup">
+      	<div className="loginSignup" role= "form">
       		<h1>SIGN UP</h1>
 
       		<span className="loginWords">USERNAME</span>
@@ -76,15 +77,16 @@ store.session.signup(data);
       			<span className="loginWords">PASSWORD</span>
       		<input className="inputField" type="password" placeholder="type here" ref="signUpPassword"/>
       		<input className="signupSend"
-          type="button"
+          type="submit"
           name="send"
           value="SEND"
           onClick= {(this.signUpSubmitHandler)}
           />
           <p></p>
-          <Link id ="loginBack" to = "/home"> BACK </Link>
+          <Link className ="loginBack" to = "/home"> BACK </Link>
 
       	</div>
+        </div>
         </div>
 
     )

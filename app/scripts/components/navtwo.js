@@ -34,7 +34,7 @@ export default React.createClass({
       if(this.state.authtoken){
     return (
       <Menu>
-      <img src= "assets/photos/pic.jpg"/>
+      <img src= "assets/photos/spoon.png"/>
       <Link className ="navButton" id ="searchButton"to = "/home">Home </Link>
       <Link className ="navButton" id ="dashboardButton" to = "/dashboard">Dashboard</Link>
         <Link className ="navButton" id ="aboutButton" to = "/about">Learn More</Link>

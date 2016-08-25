@@ -119,3 +119,10 @@ margin-bottom: 24px;
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (max-width: 450px) {
+.bm-item-list{
+display: block;
+
+}
+}

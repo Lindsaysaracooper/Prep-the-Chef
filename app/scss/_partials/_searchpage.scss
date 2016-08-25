@@ -23,6 +23,10 @@ h2{
     margin-top: 0;
     padding-top: 100px;
   }
+  h2{
+    width: 60%;
+    margin-left: 20%;
+  }
 }
 
 li .messageButton{
@@ -40,6 +44,7 @@ li .messageButton{
     margin-bottom: 50px;
     background: $background-color;
     padding: 10px 45px;
+    font-weight: bolder;
 
   img{
     width: 100%;
@@ -58,6 +63,7 @@ background-color: $background-color;
 
 .heart{
   float:left;
+  margin-right: 1%;
   color:$highlight-color;
 }
 
@@ -77,6 +83,10 @@ width: 60%;
 }
 
 @media screen and (max-width: 955px) {
+  section{
+    height:74vh;
+
+  }
   .results li{
 
     margin-left: 15%;
