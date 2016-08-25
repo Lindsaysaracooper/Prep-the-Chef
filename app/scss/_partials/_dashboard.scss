@@ -51,7 +51,7 @@ h2{
 
   display: inline-block;
   width: 60%;
-  height: 200vh;
+  height: auto;
   h2{
     font-family: $main-font;
     font-size: 2rem;
@@ -135,8 +135,11 @@ footer{
 
 
 @media screen and (max-width: 450px) {
-  .messageCenter h2{
+  .messageCenter {
+    display:block;
+    h2{
     display: block;
 font-size: 1.8rem;
   }
+}
 }

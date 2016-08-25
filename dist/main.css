@@ -959,7 +959,7 @@ li .messageButton {
 .messageCenter {
   display: inline-block;
   width: 60%;
-  height: 200vh; }
+  height: auto; }
   .messageCenter h2 {
     font-family: "Abel", sans-serif;
     font-size: 2rem;
@@ -1020,9 +1020,11 @@ li .messageButton {
   footer {
     margin-top: 65px; } }
 @media screen and (max-width: 450px) {
-  .messageCenter h2 {
-    display: block;
-    font-size: 1.8rem; } }
+  .messageCenter {
+    display: block; }
+    .messageCenter h2 {
+      display: block;
+      font-size: 1.8rem; } }
 .sent {
   height: 100vh;
   text-align: center;
