@@ -65,7 +65,7 @@ video {
 header {
   position: absolute;
   width: 100%;
-  bottom: 24vh; }
+  bottom: 25%; }
   header a {
     text-decoration: none; }
   header h1 {
@@ -90,6 +90,14 @@ header {
     width: 100%;
     font-family: "Abel", sans-serif;
     text-transform: uppercase; }
+
+#caret {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 48%;
+  top: 125%; }
 
 .searchbox {
   width: 58%;
@@ -299,7 +307,7 @@ footer p {
 
 .loginWhole {
   position: absolute;
-  bottom: 36vh;
+  top: 17%;
   width: 60%;
   text-align: center;
   background: #F9F9F7;
@@ -759,7 +767,7 @@ li .messageButton {
   font-weight: bolder; }
   .results li img {
     width: 100%;
-    height: 400px;
+    height: 200px;
     object-fit: cover; }
   .results li .rating {
     font-size: 1.3rem; }
@@ -779,14 +787,19 @@ li .messageButton {
 @media screen and (max-width: 768px) {
   .results li {
     margin-left: 15%;
-    width: 60%; } }
-@media screen and (max-width: 955px) {
+    width: 60%; }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; } }
+@media screen and (max-width: 940px) {
   section {
     height: 74vh; }
 
   .results li {
-    margin-left: 15%;
-    width: 60%; } }
+    width: 60%;
+    margin-left: 15%; } }
 @media screen and (max-width: 450px) {
   section {
     height: 650px; }
@@ -799,7 +812,6 @@ li .messageButton {
     text-align: center;
     font-family: "Abel", sans-serif;
     width: 80%;
-    height: 550px;
     margin-left: -6%; }
 
   .messageButton {
@@ -814,6 +826,7 @@ li .messageButton {
 
 .messageModal {
   position: absolute;
+  overflow: scroll;
   background: #F9F9F7;
   padding: 6vh 0px;
   font-family: "Abel", sans-serif;
@@ -869,16 +882,33 @@ li .messageButton {
   font-size: 1rem; }
 @media screen and (max-width: 450px) {
   .messageModal {
-    width: 80%;
-    left: 10%; }
+    position: absolute;
+    overflow: scroll;
+    background: #F9F9F7;
+    padding: 3%;
+    font-family: "Abel", sans-serif;
+    border: #373737 solid 2px;
+    top: 5vh;
+    bottom: 5vh;
+    width: 70%;
+    left: 15%;
+    margin-top: 15%; }
     .messageModal h1 {
-      font-size: 1.3rem; }
+      font-size: 1em;
+      padding: 0 10px; }
     .messageModal h3 {
-      font-size: 1rem; }
-    .messageModal form {
-      font-size: 0.8rem; }
+      font-size: .8em; }
+    .messageModal label {
+      display: inline;
+      font-size: .7em; }
+    .messageModal .textarea {
+      width: 80%;
+      margin-top: 10px;
+      height: 90px;
+      border: 2px solid #373737;
+      text-align: center; }
     .messageModal .backButton, .messageModal .sendButton {
-      font-size: 1rem; } }
+      font-size: .7em; } }
 .dashHeader h1 {
   font-family: "Great Vibes", cursive;
   font-size: 5rem;

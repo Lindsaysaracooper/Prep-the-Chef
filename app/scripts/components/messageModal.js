@@ -95,7 +95,6 @@ console.log(this.props)
           <input type="checkbox" name="restriction" ref="gelatin" value="gelatin" id="gelatin"/>
           <label htmlFor= "gluten">Gluten</label>
           <input type="checkbox" name="restriction" ref="gluten" value="gluten" id="gluten"/>
-          <p></p>
           <label htmlFor= "goat">Goat</label>
           <input type="checkbox" name="restriction" ref="goat" value="goat" id="goat"/>
           <label htmlFor= "peanuts">Peanuts</label>

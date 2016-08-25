@@ -18,6 +18,7 @@ render:function(){
 			<h2>chat with the chef to prepare meals designed with you in mind.</h2>
       <Searchbox />
       <h3>(currently in austin only)</h3>
+      <p> <i className="fa fa-caret-down" id="caret" aria-hidden="true"></i></p>
 		</header>
 
 <article className="howItWorks">

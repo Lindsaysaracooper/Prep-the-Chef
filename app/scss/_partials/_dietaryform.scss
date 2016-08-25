@@ -8,6 +8,7 @@ background-color: rgba($main-color,.6);
 }
 .messageModal{
   position: absolute;
+  overflow: scroll;
       background: $background-color;
       padding: 6vh 0px;
       font-family: "Abel", sans-serif;
@@ -77,20 +78,38 @@ font-size: 1rem;
 
 @media screen and (max-width: 450px) {
 .messageModal{
-  width: 80%;
-left: 10%;
+  position: absolute;
+  overflow: scroll;
+  background: #F9F9F7;
+  padding: 3%;
+  font-family: "Abel", sans-serif;
+  border: #373737 solid 2px;
+  top: 5vh;
+  bottom: 5vh;
+  width: 70%;
+  left: 15%;
+  margin-top: 15%;
+
 h1{
-      font-size: 1.3rem;
+  font-size: 1em;
+      padding: 0 10px;
 }
 h3{
-  font-size: 1rem;
+  font-size: .8em;
 }
-form{
-font-size: 0.8rem;
+label{
+  display: inline;
+font-size: .7em;
+}
+.textarea{
+  width: 80%;
+margin-top: 10px;
+height: 90px;
+border: 2px solid #373737;
+text-align: center;
 }
 .backButton, .sendButton {
-  font-size: 1rem;
+  font-size: .7em;
 }
 }
-
 }
