@@ -57,4 +57,7 @@
   - Add individual photos
 
 ###Trello
-    - Storyboards, Wireframes etc can be found here https://trello.com/b/3v82tDE0/final-project-for-tiy
+    - Storyboards, Wireframes etc can be found here "https://trello.com/b/3v82tDE0/final-project-for-tiy"
+
+### Live version of the site
+  - www.graceful-development.surge.sh
