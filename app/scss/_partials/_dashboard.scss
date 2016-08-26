@@ -86,7 +86,6 @@ margin-bottom: 20px;
 .to{
 font-size: 1.4rem;
 font-weight: bolder;
-margin-top: -35px;
 }
 .message{
       padding-left: 8%;
@@ -118,8 +117,9 @@ width: 75%;
     width: 155%;
     padding: 18px;
     li{
-      width: auto;
-height: auto;
+      width: 70%;
+          height: auto;
+          margin-left: 15%;
     }
     img{
       width: 100%;

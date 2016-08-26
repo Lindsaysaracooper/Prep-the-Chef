@@ -985,8 +985,7 @@ li .messageButton {
     margin-bottom: 20px; }
   .eachMessage .to {
     font-size: 1.4rem;
-    font-weight: bolder;
-    margin-top: -35px; }
+    font-weight: bolder; }
   .eachMessage .message {
     padding-left: 8%; }
   .eachMessage .allergy {
@@ -1010,8 +1009,9 @@ li .messageButton {
     width: 155%;
     padding: 18px; }
     .eachMessage li {
-      width: auto;
-      height: auto; }
+      width: 70%;
+      height: auto;
+      margin-left: 15%; }
     .eachMessage img {
       width: 100%; }
     .eachMessage .to {

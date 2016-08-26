@@ -84,10 +84,10 @@ store.session.toggleFavorite(e.target.id)
         return (
           <li key={i}>
           <img src={store.restaurants.findWhere({Name:message.restaurant}).get('Image')}/>
-          <p className="reservation"> Reservation date: {message.date}</p>
           <p className="to">To: {message.restaurant} </p>
           <p className="message"> "{message.textarea}"</p>
           <p className="diet">Dietary Restrictions: {allergyList}</p>
+          <p className="reservation"> Reservation date: {message.date}</p>
 
 
           </li>
